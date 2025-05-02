@@ -1,24 +1,28 @@
-from django.shortcuts import render
-from django.http import HttpResponse
-from rest_framework import generics, permissions
-from .models import ProjectTopic
-from .serializers import ProjectTopicSerializer
-from .permissions import IsStudent
+from rest_framework import viewsets
+from .models import User, Student, Supervisor, Project, Proposal, Announcement
+from  .serializers import  UserSerializer, StudentSerializer, SupervisorSerializer, ProjectSerializer, ProposalSerializer, AnnouncementSerializer
 
-# Create your views here.
-class TopicSubmitView(generics.CreateAPIView):
-    serializer_class = ProjectTopicSerializer
-    permission_classes = [permissions.IsAuthenticated, IsStudent]
 
-    def perform_create(self, serializer):
-        student = self.request.user
-        if ProjectTopic.objects.filter(student=student).count() >= 3:
-            raise ValidationError("You have reached the topic submission limit (3).")
-        serializer.save(student=student)
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
 
-class TopicListView(generics.ListAPIView):
-    serializer_class = ProjectTopicSerializer
-    permission_classes = [permissions.IsAuthenticated, IsStudent]
+class StudentViewset(viewsets.ModelViewSet):
+    queryset = Student.objects.all()
+    serializer_class = StudentSerializer
 
-    def get_queryset(self):
-        return Project.objects.filter(student=self.request.user)
+class SupervisorviewSet(viewsets.ModelViewSet):
+     queryset = Supervisor.objects.all()
+     serializer_class = SupervisorSerializer
+
+class ProjectViewSet(viewsets.ModelViewSet):
+    queryset = Project.objects.all()
+    serializer_class = ProjectSerializer
+
+class ProposalViewSet(viewsets.ModelViewSet):
+    queryset = Proposal.objects.all()
+    serializer_class = ProposalSerializer
+
+class AnnouncementViewSet(viewsets.ModelViewSet):
+    queryset = Announcement.objects.all()
+    serializer_class = AnnouncementSerializer
