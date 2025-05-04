@@ -7,11 +7,11 @@ class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
-class StudentViewset(viewsets.ModelViewSet):
+class StudentViewSet(viewsets.ModelViewSet):
     queryset = Student.objects.all()
     serializer_class = StudentSerializer
 
-class SupervisorviewSet(viewsets.ModelViewSet):
+class SupervisorViewSet(viewsets.ModelViewSet):
      queryset = Supervisor.objects.all()
      serializer_class = SupervisorSerializer
 

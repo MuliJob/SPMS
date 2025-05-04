@@ -1,5 +1,5 @@
 from django.urls import path, include
-from rest_framework import DefaultRouter
+from rest_framework.routers import DefaultRouter
 from .views import UserViewSet, StudentViewSet, SupervisorViewSet, ProjectViewSet, ProposalViewSet, AnnouncementViewSet
 
 router = DefaultRouter()
@@ -11,5 +11,5 @@ router.register(r'proposals', ProposalViewSet)
 router.register(r'announcements', AnnouncementViewSet)
 
 urlpatterns = [
-    path('api/students/', include(router.urls)),
+    path('', include(router.urls)),
 ]
