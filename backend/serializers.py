@@ -9,12 +9,11 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class StudentSerializer(serializers.ModelSerializer):
-    User = UserSerializer(read_only=True)
-
+    
 
     class Meta:
         model = Student
-        fields = '__all__'
+        fields = ['user', 'registration_number']
 
 class SupervisorSerializer(serializers.ModelSerializer):
     User = UserSerializer(read_only=True)

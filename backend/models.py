@@ -10,8 +10,8 @@ class User(AbstractUser):
     role = models.CharField(max_length=20, choices=ROLE_CHOICES)
 
 class Student(models.Model):
-    User = models.OneToOneField(User, on_delete=models.CASCADE)
-    registartion_number = models.CharField(max_length=30, unique=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    registration_number = models.CharField(max_length=30, unique=True)
 
     def __str__(self):
         return self.user.username
