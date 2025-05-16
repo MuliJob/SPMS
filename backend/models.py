@@ -15,17 +15,17 @@ class Student(models.Model):
     registration_number = models.CharField(max_length=30, unique=True)
 
     def __str__(self):
-        return self.user.username
+        return f"{self.user.username} ({self.registration_number})"
 
 class Supervisor(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     department = models.CharField(max_length=100, null=True, blank=True)
 
     def __str__(self):
-        return self.title
+        return f"{self.user.username} - {self.department}"
 
 class Project(models.Model):
-    student = models.ForeignKey(User, on_delete=models.CASCADE, limit_choices_to={'role': 'student'})
+    student = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=255)
     description = models.TextField()
     status = models.CharField(max_length=20, choices=[('pending', 'Pending'), ('approved', 'Approved'), ('rejected', 'Rejected')], default='Pending' )
