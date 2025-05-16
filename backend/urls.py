@@ -6,7 +6,7 @@ router = DefaultRouter()
 router.register(r'users', UserViewSet)
 router.register(r'students', StudentViewSet)
 router.register(r'supervisors', SupervisorViewSet)
-router.register(r'projects', ProjectViewSet)
+router.register(r'projects', ProjectViewSet, basename='projects')
 router.register(r'proposals', ProposalViewSet)
 router.register(r'announcements', AnnouncementViewSet)
 

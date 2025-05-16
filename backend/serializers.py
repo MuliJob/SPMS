@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from .models import User, Student, Supervisor, Project, Proposal, Announcement
-
+from .models import Project
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
