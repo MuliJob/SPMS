@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from .models import User, Student, Supervisor, Project, Proposal, Announcement
-from .models import Project
+
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -32,15 +32,13 @@ class ProjectSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class ProposalSerializer(serializers.ModelSerializer):
-    Project = ProjectSerializer(read_only=True)
 
     class Meta:
         model = Proposal
         fields = '__all__'
 
 class AnnouncementSerializer(serializers.ModelSerializer):
-    author =UserSerializer(read_only=True)
-
+    
     class Meta:
         model = Announcement
         fields = '__all__'

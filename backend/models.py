@@ -1,5 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from django.contrib.auth import get_user_model
+
+User = get_user_model
 
 
 class User(AbstractUser):
@@ -42,13 +45,13 @@ def proposal_upload_path(instance, filename):
 
 class Proposal(models.Model):
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
-    document = models.FileField(upload_to='proposals/')
+    file = models.FileField(upload_to=proposal_upload_path)
     feedback = models.TextField(blank=True, null=True)
     submitted_at = models.DateTimeField(auto_now_add=True)
 
 
     def __str__(self):
-        return f"proposal for {self.project.title}"
+        return f"proposal for - {self.project.title}"
 
 
 class Announcement(models.Model):
@@ -57,5 +60,5 @@ class Announcement(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"Announcement by {self.author.username} on {self.created_at.date()}"
+        return f"Announcement by {self.author.username} at  {self.created_at.strftime('%Y-%m-%d %H:%M')}"
 
