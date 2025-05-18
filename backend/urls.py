@@ -13,7 +13,7 @@ router.register(r'announcements', AnnouncementViewSet, basename='announcements')
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('login/', CustomAuthToken.as_view(), name='api_login'),
-    path('logout/', LogoutView.as_view(), name='api_logout'),
+    path('login/', CustomAuthToken.as_view(), name='login'),
+    path('logout/', LogoutView.as_view(), name='logout'),
 
 ]
