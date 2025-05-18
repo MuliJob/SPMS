@@ -1,8 +1,8 @@
-# Senior project Management system
+# SENIOR PROJECT MANAGEMENT SYSTEM
 
 The Senior Project Management System is a web-based platform that streamlines the final-year project selection and tracking process for students, supervisors, and lecturers.
 
-# API OVERVIEW
+## API Overview
 
 The Senior Project Management System (SPMS) backend provides RESTful APIs to manage final-year project workflows for students, supervisors, and coordinators.
 
@@ -14,4 +14,5 @@ Proposal Submission & Feedback          Upload proposals, give feedback, and app
 Project Tracking & Announcements        Monitor progress and post project announcements 
 
 
-### You can find the full documentation in my github repo wiki <https://github.com/qmuuoryan/SPMS/wiki>
+### You can find the full documentation in my github repo wiki 
+<https://github.com/qmuuoryan/SPMS/wiki>
