@@ -21,4 +21,4 @@ class UserRegistartionSerializer(serializers.ModelSerializer):
             role= validated_data['role']
         )
 
-        return User
+        return user
