@@ -1,0 +1,7 @@
+from .user_serializer import UserSerializer
+from .student_serializer import StudentSerializer
+from .supervisor_serializer import SupervisorSerializer
+from .project_serializer import ProjectSerializer
+from .proposal_serializer import ProposalSerializer
+from .announcement_serializer import AnnouncementSerializer
+from .user_registration_serializer import UserRegistrationSerializer
