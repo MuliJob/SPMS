@@ -1,6 +1,6 @@
 from rest_framework import viewsets
 from .models import User, Student, Supervisor, Project, Proposal, Announcement
-from  .serializers import  UserSerializer, StudentSerializer, SupervisorSerializer, ProjectSerializer, ProposalSerializer, AnnouncementSerializer
+from  backend.serializers import  UserSerializer, StudentSerializer, SupervisorSerializer, ProjectSerializer, ProposalSerializer, AnnouncementSerializer, UserRegistrationSerializer
 
 
 class UserViewSet(viewsets.ModelViewSet):
