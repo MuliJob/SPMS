@@ -3,6 +3,7 @@ from rest_framework.routers import DefaultRouter
 from .user_views import UserViewSet, StudentViewSet, SupervisorViewSet, ProjectViewSet, ProposalViewSet, AnnouncementViewSet
 from .views.auth import CustomAuthToken,  LogoutView
 from .views.register import RegistrationView
+from backend.views.login import LoginView
 
 
 
@@ -19,5 +20,6 @@ urlpatterns = [
     path('login/', CustomAuthToken.as_view(), name='login'),
     path('logout/', LogoutView.as_view(), name='logout'),
     path('register/', RegistrationView.as_view(), name='register'),
+    path('api/login/', LoginView.as_view(), name='login'),
     
 ]
