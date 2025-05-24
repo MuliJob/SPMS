@@ -2,7 +2,7 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from .user_views import UserViewSet, StudentViewSet, SupervisorViewSet, ProjectViewSet, ProposalViewSet, AnnouncementViewSet
 from .views.auth import CustomAuthToken,  LogoutView
-from .views.register import registerView
+from .views.register import RegistrationView
 
 
 
@@ -18,6 +18,6 @@ urlpatterns = [
     path('', include(router.urls)),
     path('login/', CustomAuthToken.as_view(), name='login'),
     path('logout/', LogoutView.as_view(), name='logout'),
-    path('register/', RegisterView.as_view(), name='register'),
+    path('register/', RegistrationView.as_view(), name='register'),
     
 ]
