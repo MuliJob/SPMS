@@ -4,7 +4,7 @@ from .user_views import UserViewSet, StudentViewSet, SupervisorViewSet, ProjectV
 from .views.auth import CustomAuthToken,  LogoutView
 from .views.register import RegistrationView
 from backend.views.login import LoginView
-
+from backend.views.test_view import ProtectedTestView
 
 
 router = DefaultRouter()
@@ -21,5 +21,5 @@ urlpatterns = [
     path('logout/', LogoutView.as_view(), name='logout'),
     path('register/', RegistrationView.as_view(), name='register'),
     path('api/login/', LoginView.as_view(), name='login'),
-    
+    path('protected/', ProtectedTestView.as_view(), name='protected'),
 ]
