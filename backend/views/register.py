@@ -3,8 +3,13 @@ from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.authtoken.models import Token
 from backend.serializers.user_serializer import UserSerializer
+from rest_framework.permissions import AllowAny
+
 
 class RegistrationView(APIView):
+    permission_classes = [AllowAny]  
+
+
     def post(self, request):
         serializer = UserSerializer(data=request.data)
         if serializer.is_valid():
