@@ -1,5 +1,8 @@
 from django.contrib.auth import get_user_model
 from rest_framework import serializers
+from backend.models import Student, Supervisor
+
+
 
 User = get_user_model()
 
@@ -13,12 +16,19 @@ class UserSerializer(serializers.ModelSerializer):
         fields = ['username', 'email', 'password', 'role']
 
 
-    def create(self, validated_data):
+    def  create(self, validated_data):
+        role = validated_data.get('role')
         user = User.objects.create_user(
-            username = validated_data['username'],
-            email = validated_data.get('email'),
-            password = validated_data['password'],
-            role= validated_data['role']
+            username=validated_data['username'],
+            email=validated_data['email'],
+            password=validated_data['password'],
+            role=role
         )
+
+        
+        if role == 'student':
+            Student.objects.create(user=user, registration_number=f"REG-{user.id}")
+        elif role == 'supervisor':
+            Supervisor.objects.create(user=user)
 
         return user
