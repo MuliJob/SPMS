@@ -22,6 +22,21 @@ class SupervisorViewSet(viewsets.ModelViewSet):
 class ProjectViewSet(viewsets.ModelViewSet):
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
+    permission_class = [IsAuthenticated]
+
+    @action(detail=True, methods=['post'], permission_classes=[IsAuthenticated, IsLecturer])
+    def approve(self, request, pk=None):
+        project = self.get_object()
+        project.status = 'approved'
+        project.save()
+        return Response({'message': 'Project approved'}, status=status.HTTP_200_OK)
+
+    @action(detail=True, methods=['post'], permission_classes=[IsAuthenticated, IsLecturer])
+    def reject(self, request, pk=None):
+        project = self.get_object()
+        project.status = 'rejected'
+        project.save()
+        return Response({'message': 'Project rejected'}, status=status.HTTP_200_OK)
 
 class ProposalViewSet(viewsets.ModelViewSet):
     queryset = Proposal.objects.all()
