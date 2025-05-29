@@ -5,7 +5,7 @@ from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework import status
 from backend.permissions.is_lecturer import IsLecturer
-
+from rest_framework.permissions import IsAuthenticated
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
