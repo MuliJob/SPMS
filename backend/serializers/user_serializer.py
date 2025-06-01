@@ -1,6 +1,6 @@
 from django.contrib.auth import get_user_model
 from rest_framework import serializers
-from backend.models import Student, Supervisor
+from backend.models import Student, Supervisor, Lecturer
 
 
 
@@ -30,5 +30,8 @@ class UserSerializer(serializers.ModelSerializer):
             Student.objects.create(user=user, registration_number=f"REG-{user.id}")
         elif role == 'supervisor':
             Supervisor.objects.create(user=user)
+
+        elif  user.role == "lecturer":
+            Lecturer.objects.create(user=user)
 
         return user
