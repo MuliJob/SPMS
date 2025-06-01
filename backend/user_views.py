@@ -24,6 +24,14 @@ class ProjectViewSet(viewsets.ModelViewSet):
     serializer_class = ProjectSerializer
     permission_class = [IsAuthenticated]
 
+
+    @action(detail=True, methods=['post'], permission_classes=[IsLecturer])
+    def approve(self, request, pk=None):
+        ...
+    
+    @action(detail=True, methods=['post'], permission_classes=[IsLecturer])
+    def assign_supervisor(self, request, pk=None):
+
     @action(detail=True, methods=['post'], permission_classes=[IsAuthenticated, IsLecturer])
     def approve(self, request, pk=None):
         project = self.get_object()
