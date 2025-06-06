@@ -1,10 +1,9 @@
-from rest_framework import viewsets
+from rest_framework import viewsets, status, permissions
 from .models import User, Student, Supervisor, Project, Proposal, Announcement
 from  backend.serializers import  UserSerializer, StudentSerializer, SupervisorSerializer, ProjectSerializer, ProposalSerializer, AnnouncementSerializer, UserSerializer
 from rest_framework.decorators import action
 from rest_framework.response import Response
-from rest_framework import status
-from backend.permissions.is_lecturer import IsLecturer
+from backend.permissions import IsLecturer,IsStudent, IsSupervisor
 from rest_framework.permissions import IsAuthenticated
 from django.shortcuts import get_object_or_404
 
@@ -57,6 +56,25 @@ class ProjectViewSet(viewsets.ModelViewSet):
 class ProposalViewSet(viewsets.ModelViewSet):
     queryset = Proposal.objects.all()
     serializer_class = ProposalSerializer
+    permission_classes = [permisssions.IsAuthenticated]
+
+    def perform_create(self,serializer):
+        project = serializer.validated_data['project']
+        if self.request.user != project.student:
+            raise permissionError("You are not allowed to submit a proposal for this project.")
+        serializer.save()
+
+    @action(detail =True, methods=['post'], permission_classes=[permissions.IsAuthenticated, IsSupervisor | IsLecturer])
+    def add_feedback(self, request, pk=None):
+        proposal =self.get_object()
+        feedback = request.data.get('feedback')
+
+        if not feedback:
+            return Response({'error': 'Feedback is required'}, status=status.HTTP_400_BAD_REQUESt)
+        proposal.feedback = feedback
+        proposal.save()
+        return Response({'message': 'Feedback added'}, status=status.HTTP_200_OK)   
+
 
 class AnnouncementViewSet(viewsets.ModelViewSet):
     queryset = Announcement.objects.all()
