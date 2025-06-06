@@ -44,15 +44,15 @@ class ProjectViewSet(viewsets.ModelViewSet):
     def assign_supervisor(self, request, pk=None):
         project = self.get_object()
         supervisor_id = request.data.get('supervisor_id')
+        
+        if not supervisor_id:
+            return Response({'error': 'Supervisor ID is required'}, status=400)
 
-        try:
-            supervisor = Supervisor.objects.get(id=supervisor_id)
-            project.supervisor = supervisor
-            project.save()
-            return Response({'message': f'Supervisor {supervisor.user.username} assigned successfully'}, status=status.HTTP_200_OK)
-        except Supervisor.DoesNotExist:
-            return Response({'error': 'Supervisor not found'}, status=status.HTTP_400_BAD_REQUEST)
-
+        supervisor = get_object_or_404(Supervisor, id=supervisor_id)
+        project.supervisor = supervisor
+        project.save()
+        
+        return Response({'message': f'Supervisor {supervisor.user.username} assigned successfully'}, status=200)
 
 class ProposalViewSet(viewsets.ModelViewSet):
     queryset = Proposal.objects.all()
