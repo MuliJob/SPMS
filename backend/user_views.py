@@ -6,6 +6,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from backend.permissions.is_lecturer import IsLecturer
 from rest_framework.permissions import IsAuthenticated
+from django.shortcuts import get_object_or_404
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
