@@ -56,7 +56,7 @@ class ProjectViewSet(viewsets.ModelViewSet):
 class ProposalViewSet(viewsets.ModelViewSet):
     queryset = Proposal.objects.all()
     serializer_class = ProposalSerializer
-    permission_classes = [permisssions.IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticated]
 
     def perform_create(self,serializer):
         project = serializer.validated_data['project']
