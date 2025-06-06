@@ -1,6 +1,7 @@
 from django.db import models
 from backend.models.user import User
 
+
 class Lecturer(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
