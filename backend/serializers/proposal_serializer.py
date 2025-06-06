@@ -4,4 +4,6 @@ from backend.models import Proposal
 class ProposalSerializer(serializers.ModelSerializer):
     class Meta:
         model = Proposal
-        fields = '__all__'
+        fields = ['id', 'project', 'file', 'feedback', 'submitted_at']
+        read_only_fields = ['submitted_at', 'feedback']
+        
