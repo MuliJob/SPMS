@@ -70,10 +70,28 @@ class ProposalViewSet(viewsets.ModelViewSet):
         feedback = request.data.get('feedback')
 
         if not feedback:
-            return Response({'error': 'Feedback is required'}, status=status.HTTP_400_BAD_REQUESt)
+            return Response({'error': 'Feedback is required'}, status=status.HTTP_400_BAD_REQUEST)
         proposal.feedback = feedback
         proposal.save()
         return Response({'message': 'Feedback added'}, status=status.HTTP_200_OK)   
+
+    @action(detail=True, methods=['post'], permission_classes=[IsAuthenticated, IsSupervisor])
+    def feedback(self, request, pk=None):
+        proposal = self.get_object()
+        user = request.user
+
+        
+        if proposal.project.supervisor and proposal.project.supervisor.user == user:
+            feedback_text = request.data.get('feedback')
+            if not feedback_text:
+                return Response({'error': 'Feedback is required'}, status=status.HTTP_400_BAD_REQUEST)
+            
+            proposal.feedback = feedback_text
+            proposal.save()
+            return Response({'message': 'Feedback submitted successfully'}, status=status.HTTP_200_OK)
+        else:
+            return Response({'error': 'You are not the supervisor of this project'}, status=status.HTTP_403_FORBIDDEN)
+
 
 
 class AnnouncementViewSet(viewsets.ModelViewSet):
