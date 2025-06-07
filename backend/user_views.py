@@ -72,8 +72,9 @@ class ProposalViewSet(viewsets.ModelViewSet):
         if not feedback:
             return Response({'error': 'Feedback is required'}, status=status.HTTP_400_BAD_REQUEST)
         proposal.feedback = feedback
+        proposal.status = 'reviewed'
         proposal.save()
-        return Response({'message': 'Feedback added'}, status=status.HTTP_200_OK)   
+        return Response({'message': 'Feedback added and status set to reviewed'}, status=status.HTTP_200_OK)   
 
     @action(detail=True, methods=['post'], permission_classes=[IsAuthenticated, IsSupervisor])
     def feedback(self, request, pk=None):
@@ -87,8 +88,9 @@ class ProposalViewSet(viewsets.ModelViewSet):
                 return Response({'error': 'Feedback is required'}, status=status.HTTP_400_BAD_REQUEST)
             
             proposal.feedback = feedback_text
+            proposal.status = 'reviewed'
             proposal.save()
-            return Response({'message': 'Feedback submitted successfully'}, status=status.HTTP_200_OK)
+            return Response({'message': 'Feedback submitted and status set to reviewed'}, status=status.HTTP_200_OK)
         else:
             return Response({'error': 'You are not the supervisor of this project'}, status=status.HTTP_403_FORBIDDEN)
 
