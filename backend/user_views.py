@@ -1,6 +1,6 @@
 from rest_framework import viewsets, status, permissions
-from .models import User, Student, Supervisor, Project, Proposal, Announcement
-from  backend.serializers import  UserSerializer, StudentSerializer, SupervisorSerializer, ProjectSerializer, ProposalSerializer, AnnouncementSerializer, UserSerializer
+from .models import User, Student, Supervisor, Project, Proposal, Announcement, Notification
+from  backend.serializers import  UserSerializer, StudentSerializer, SupervisorSerializer, ProjectSerializer, ProposalSerializer, AnnouncementSerializer, UserSerializer, NotificationSerializer
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from backend.permissions import IsLecturer,IsStudent, IsSupervisor
@@ -66,6 +66,11 @@ class ProposalViewSet(viewsets.ModelViewSet):
 
     @action(detail =True, methods=['post'], permission_classes=[permissions.IsAuthenticated, IsSupervisor | IsLecturer])
     def add_feedback(self, request, pk=None):
+        student_user = proposal.project.student
+        Notification.objects.create(
+    user=student_user,
+    message=f"Feedback added to your proposal: '{proposal.project.title}'"
+)
         proposal =self.get_object()
         feedback = request.data.get('feedback')
 
@@ -80,6 +85,8 @@ class ProposalViewSet(viewsets.ModelViewSet):
     def feedback(self, request, pk=None):
         proposal = self.get_object()
         user = request.user
+
+     
 
         
         if proposal.project.supervisor and proposal.project.supervisor.user == user:
@@ -100,4 +107,15 @@ class AnnouncementViewSet(viewsets.ModelViewSet):
     queryset = Announcement.objects.all()
     serializer_class = AnnouncementSerializer
 
+
+class NotificationViewSet(viewsets.ModelViewSet):
+    queryset = Notification.objects.all()
+    serializer_class = NotificationSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get_queryset(self):
+        return Notification.objects.filter(user=self.request.user).order_by('-created_at')
+
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
    
