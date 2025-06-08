@@ -1,7 +1,5 @@
 from django.contrib import admin
-
-
-from .models import User, Project, Student, Supervisor, Announcement, Proposal, Lecturer
+from .models import User, Project, Student, Supervisor, Announcement, Proposal, Lecturer, Notification
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 
 
@@ -20,3 +18,4 @@ admin.site.register(Project)
 admin.site.register(Announcement)
 admin.site.register(Proposal)
 admin.site.register(Lecturer)
+admin.site.register(Notification)
