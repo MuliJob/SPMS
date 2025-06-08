@@ -1,6 +1,6 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .user_views import UserViewSet, StudentViewSet, SupervisorViewSet, ProjectViewSet, ProposalViewSet, AnnouncementViewSet
+from .user_views import UserViewSet, StudentViewSet, SupervisorViewSet, ProjectViewSet, ProposalViewSet, AnnouncementViewSet, NotificationViewSet
 from .views.auth import CustomAuthToken,  LogoutView
 from .views.register import RegistrationView
 from backend.views.login import LoginView
@@ -14,6 +14,8 @@ router.register(r'supervisors', SupervisorViewSet, basename='supervisors')
 router.register(r'projects', ProjectViewSet, basename='projects')
 router.register(r'proposals', ProposalViewSet, basename='proposals')
 router.register(r'announcements', AnnouncementViewSet, basename='announcements')
+router.register(r'notifications', NotificationViewSet, basename='notifications')
+
 
 urlpatterns = [
     path('', include(router.urls)),
