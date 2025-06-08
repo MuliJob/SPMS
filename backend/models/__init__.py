@@ -5,4 +5,5 @@ from .project import Project
 from .proposal import Proposal, proposal_upload_path
 from .announcement import Announcement
 from .lecturer import Lecturer
+from .notification import Notification
 
