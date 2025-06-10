@@ -119,3 +119,12 @@ class NotificationViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
    
+    @action(detail=True, methods=['post'], permission_classes=[permissions.IsAuthenticated])
+    def mark_read(self, request, pk=None):
+        notification = self.get_object()
+        if notification.user != request.user:
+            return Response({'error': 'Not allowed'}, status=status.HTTP_403_FORBIDDEN)
+        
+        notification.is_read = True
+        notification.save()
+        return Response({'message': 'Notification marked as read'}, status=status.HTTP_200_OK)
