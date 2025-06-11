@@ -24,9 +24,7 @@ urlpatterns = [
     path('register/', RegistrationView.as_view(), name='register'),
     path('api/login/', LoginView.as_view(), name='login'),
     path('protected/', ProtectedTestView.as_view(), name='protected'),
-    
-
-    path('dashboard/student/', StudentDashboardView.as_view(), name='student-dashboard'),
+    path('/student/', StudentDashboardView.as_view(), name='student-dashboard'),
     path('dashboard/supervisor/', SupervisorDashboardView.as_view(), name='supervisor-dashboard'),
     path('dashboard/lecturer/', LecturerDashboardView.as_view(), name='lecturer-dashboard'),
 ]
