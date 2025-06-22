@@ -18,7 +18,10 @@ class RegistrationView(APIView):
             return Response({
                 "message": "User registered successfully",
                 "user": UserSerializer(user).data,
-                "token": token.key
+                "token": token.key,
+                "role": user.role
+
+
             }, status=status.HTTP_201_CREATED)
         
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

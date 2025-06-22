@@ -18,8 +18,10 @@ class LoginView(APIView):
             token, craeted = Token.objects.get_or_create(user=user)
             return Response({
                 "message": "Login successful",
-                "token": token.key
-            }, ststus=status.HTTP_200_OK)
+                "token": token.key,
+                "role": user.role
+
+            }, status=status.HTTP_200_OK)
         else:
             return Response({
                 "error": "Invalid username or password"
