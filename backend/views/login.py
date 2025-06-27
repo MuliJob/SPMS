@@ -1,10 +1,12 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from django.contrib.auth import authenticate
 from rest_framework.authtoken.models import Token
-from backend.serializers.user_serializer import UserSerializer
+
+from django.contrib.auth import authenticate
 from django.contrib.auth import get_user_model
+
+from backend.serializers.user_serializer import UserSerializer
 
 User = get_user_model()
 
@@ -15,15 +17,11 @@ class LoginView(APIView):
 
         user = authenticate(username=username, password=password)
 
-
-    
-
         if user:
             print("Authenticated user:", user)
             print("User role:", user.role)
 
             token, _ = Token.objects.get_or_create(user=user)
-            
 
             return Response({
                 "message": "Login successful",
