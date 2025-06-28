@@ -6,18 +6,22 @@ from backend.models import Project, Proposal, Supervisor, Student, User
 
 
 class StudentDashboardView(APIView):
-    permission_classes = [IsAuthenticated, IsStudent]
+    permission_classes = [IsAuthenticated]
 
     def get(self, request):
-        student = request.user
-        projects = Project.objects.filter(student=student)
-        project = projects.first()
-        proposal_submitted = Proposal.objects.filter(project__student=student).exists()
-        return Response({
-            'projects_submitted': projects.count(),
-            'proposal_submitted': proposal_submitted,
-            'project_status': project.status if project else 'No project'
-        })
+        user = request.user
+        if hasattr(user, 'student'):
+            proposals = Proposal.objects.filter(student=user.student).values('title', 'status', 'submitted_at')
+            notifications = Notification.objects.filter(user=user, is_read=False).values('message', 'created_at')
+
+            return Response({
+                "proposals": list(proposals),
+                "notifications": list(notifications),
+                "registration_number": user.student.registration_number,
+                "full_name": user.get_full_name(),
+            })
+        return Response({"error": "You are not a student"}, status=403)
+
 
 
 

@@ -26,4 +26,7 @@ class UserSerializer(serializers.ModelSerializer):
         elif role == 'lecturer':
             Lecturer.objects.create(user=user)
 
+            
+
+
         return user
