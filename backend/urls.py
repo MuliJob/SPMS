@@ -6,6 +6,7 @@ from .views.register import RegistrationView
 from backend.views.login import LoginView
 from backend.views.test_view import ProtectedTestView
 from backend.views.dashboard import StudentDashboardView, SupervisorDashboardView, LecturerDashboardView
+from backend.views.student import SubmitTopicView
 
 
 
@@ -32,6 +33,7 @@ urlpatterns = [
     path('api/auth/', include('dj_rest_auth.urls')),  
     path('api/auth/registration/', include('dj_rest_auth.registration.urls')),  
     path('api/auth/social/', include('allauth.socialaccount.urls')),
+    path('api/student/submit-topic/', SubmitTopicView.as_view(), name='submit-topic'),
     
 ]
 
