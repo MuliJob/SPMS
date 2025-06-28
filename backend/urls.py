@@ -29,6 +29,9 @@ urlpatterns = [
     path('register/', RegistrationView.as_view(), name='register'),
     path('api/login/', LoginView.as_view(), name='login'),
     path('protected/', ProtectedTestView.as_view(), name='protected'),
+    path('api/auth/', include('dj_rest_auth.urls')),  
+    path('api/auth/registration/', include('dj_rest_auth.registration.urls')),  
+    path('api/auth/social/', include('allauth.socialaccount.urls')),
     
 ]
 
