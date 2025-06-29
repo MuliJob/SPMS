@@ -22,9 +22,6 @@ router.register(r'notifications', NotificationViewSet, basename='notifications')
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('dashboard/student/', StudentDashboardView.as_view(), name='student-dashboard'),
-    path('dashboard/supervisor/', SupervisorDashboardView.as_view(), name='supervisor-dashboard'),
-    path('dashboard/lecturer/', LecturerDashboardView.as_view(), name='lecturer-dashboard'),
     path('login/', CustomAuthToken.as_view(), name='login'),
     path('logout/', LogoutView.as_view(), name='logout'),
     path('register/', RegistrationView.as_view(), name='register'),
@@ -33,8 +30,13 @@ urlpatterns = [
     path('api/auth/', include('dj_rest_auth.urls')),  
     path('api/auth/registration/', include('dj_rest_auth.registration.urls')),  
     path('api/auth/social/', include('allauth.socialaccount.urls')),
-    path('api/student/submit-topic/', SubmitTopicView.as_view(), name='submit-topic'),
-    
+    path('dashboard/student/', StudentDashboardView.as_view(), name='student-dashboard'),
+    path('dashboard/supervisor/', SupervisorDashboardView.as_view(), name='supervisor-dashboard'),
+    path('dashboard/lecturer/', LecturerDashboardView.as_view(), name='lecturer-dashboard'),
+    path('dashboard/student/submit-topic/', SubmitTopicView.as_view(), name='submit-topic'),
+
+
+
 ]
 
 

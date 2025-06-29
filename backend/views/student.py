@@ -3,6 +3,7 @@ from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from backend.models import Project, Student
 from rest_framework import status
+from backend.serializers import ProjectSerializer 
 
 class SubmitTopicView(APIView):
     permission_classes = [IsAuthenticated]
@@ -12,15 +13,17 @@ class SubmitTopicView(APIView):
         description = request.data.get('description')
 
         try:
-            student = Student.objects.get(user=request.user)
-            if Project.objects.filter(student=student).exists():
+            
+            Student.objects.get(user=request.user)
+
+            if Project.objects.filter(student=request.user).exists():
                 return Response({"error": "You have already submitted a topic."}, status=status.HTTP_400_BAD_REQUEST)
 
             Project.objects.create(
-                student=student,
+                student=request.user,
                 title=title,
                 description=description,
-                status='Pending',
+                status='pending'
             )
             return Response({"message": "Project topic submitted successfully."}, status=status.HTTP_201_CREATED)
 

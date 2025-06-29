@@ -2,7 +2,8 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from backend.permissions import IsStudent, IsSupervisor, IsLecturer
-from backend.models import Project, Proposal, Supervisor, Student, User
+from backend.models import Project, Proposal, Supervisor, Student, User, Notification
+from backend.serializers import ProjectSerializer
 
 
 class StudentDashboardView(APIView):
@@ -11,17 +12,30 @@ class StudentDashboardView(APIView):
     def get(self, request):
         user = request.user
         if hasattr(user, 'student'):
-            proposals = Proposal.objects.filter(student=user.student).values('title', 'status', 'submitted_at')
-            notifications = Notification.objects.filter(user=user, is_read=False).values('message', 'created_at')
+            proposals = Proposal.objects.filter(project__student=user).values(
+                'project__title', 'status', 'submitted_at'
+            )
+            notifications = Notification.objects.filter(user=user, read=False).values('message', 'created_at')
+            project = Project.objects.filter(student=user).first()
+
+            project_data = None
+            if project:
+                project_data = {
+                    "title": project.title,
+                    "description": project.description,
+                    "status": project.status,
+                    "submitted_at": project.submitted_at,
+                }
 
             return Response({
                 "proposals": list(proposals),
                 "notifications": list(notifications),
                 "registration_number": user.student.registration_number,
                 "full_name": user.get_full_name(),
+                "project": project_data,
             })
-        return Response({"error": "You are not a student"}, status=403)
 
+        return Response({"error": "You are not a student"}, status=403)
 
 
 
