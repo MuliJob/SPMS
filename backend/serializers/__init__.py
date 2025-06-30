@@ -5,4 +5,5 @@ from .project_serializer import ProjectSerializer
 from .proposal_serializer import ProposalSerializer
 from .announcement_serializer import AnnouncementSerializer
 from .notification_serializer import NotificationSerializer
+from .supervisor_serializer import SupervisorListSerializer
 

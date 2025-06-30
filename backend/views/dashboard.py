@@ -21,6 +21,7 @@ class StudentDashboardView(APIView):
             project_data = None
             if project:
                 project_data = {
+                    "id": project.id,
                     "title": project.title,
                     "description": project.description,
                     "status": project.status,

@@ -7,6 +7,10 @@ from backend.views.login import LoginView
 from backend.views.test_view import ProtectedTestView
 from backend.views.dashboard import StudentDashboardView, SupervisorDashboardView, LecturerDashboardView
 from backend.views.student import SubmitTopicView
+from backend.views.lecturer import SubmittedTopicsView
+from backend.views.lecturer import ApproveTopicView, RejectTopicView, AssignSupervisorView
+from backend.views.lecturer import SupervisorListView
+from backend.views.supervisor_view import AssignedProjectsView
 
 
 
@@ -34,7 +38,12 @@ urlpatterns = [
     path('dashboard/supervisor/', SupervisorDashboardView.as_view(), name='supervisor-dashboard'),
     path('dashboard/lecturer/', LecturerDashboardView.as_view(), name='lecturer-dashboard'),
     path('dashboard/student/submit-topic/', SubmitTopicView.as_view(), name='submit-topic'),
-
+    path('lecturer/submitted-topics/', SubmittedTopicsView.as_view(), name='lecturer-submitted-topics'),
+    path('lecturer/approve-topic/<int:pk>/', ApproveTopicView.as_view(), name='approve-topic'),
+    path('lecturer/reject-topic/<int:pk>/', RejectTopicView.as_view(), name='reject-topic'),
+    path('lecturer/topic/<int:pk>/assign-supervisor/', AssignSupervisorView.as_view(), name='assign-supervisor'),
+    path('lecturer/supervisors/', SupervisorListView.as_view(), name='supervisor-list'),
+    path('supervisor/assigned-projects/', AssignedProjectsView.as_view()),
 
 
 ]

@@ -2,6 +2,7 @@ from django.db import models
 from .project import Project
 
 
+
 def proposal_upload_path(instance, filename):
     return f'proposals/student_{instance.project.student.id}/{filename}'
 
