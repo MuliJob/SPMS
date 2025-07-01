@@ -3,7 +3,7 @@ from rest_framework.routers import DefaultRouter
 from .user_views import UserViewSet, StudentViewSet, SupervisorViewSet, ProjectViewSet, ProposalViewSet, AnnouncementViewSet, NotificationViewSet
 from .views.auth import CustomAuthToken,  LogoutView
 from .views.register import RegistrationView
-from backend.views.login import LoginView
+from backend.views.login import GoogleAuthView, LoginView
 from backend.views.test_view import ProtectedTestView
 from backend.views.dashboard import StudentDashboardView, SupervisorDashboardView, LecturerDashboardView
 from backend.views.student import SubmitTopicView
@@ -27,6 +27,7 @@ router.register(r'notifications', NotificationViewSet, basename='notifications')
 urlpatterns = [
     path('', include(router.urls)),
     path('login/', CustomAuthToken.as_view(), name='login'),
+    path('google/', GoogleAuthView.as_view(), name='google_auth'),
     path('logout/', LogoutView.as_view(), name='logout'),
     path('register/', RegistrationView.as_view(), name='register'),
     path('api/login/', LoginView.as_view(), name='login'),
