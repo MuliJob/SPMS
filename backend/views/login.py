@@ -10,6 +10,7 @@ from allauth.socialaccount.models import SocialAccount
 from django.contrib.auth import authenticate
 from django.contrib.auth import get_user_model
 
+from backend.models.student import Student
 from backend.serializers.user_serializer import GoogleAuthSerializer, UserSerializer
 
 User = get_user_model()
@@ -29,7 +30,6 @@ class GoogleAuthView(APIView):
         access_token = serializer.validated_data['access_token']
 
         try:
-            # Get user info from Google
             google_response = requests.get(
                 f'https://www.googleapis.com/oauth2/v2/userinfo?access_token={access_token}',
                 timeout=5
@@ -44,11 +44,10 @@ class GoogleAuthView(APIView):
             google_data = google_response.json()
             print(f'Google Data: {google_data}')
 
-            # Check if user exists
             try:
                 user = User.objects.get(email=google_data['email'])
+                print(f"User exists: {user.email}")
 
-                # Update user info if missing
                 if not user.first_name and google_data.get('given_name'):
                     user.first_name = google_data['given_name']
                 if not user.last_name and google_data.get('family_name'):
@@ -58,10 +57,13 @@ class GoogleAuthView(APIView):
                 user.is_email_verified = google_data.get('verified_email', False)
                 user.save()
 
+                if user.role == 'student' and not hasattr(user, 'student'):
+                    student = Student.objects.create(user=user, registration_number=f"REG-{user.id}")
+                    print(f"Student created for existing user: {student.registration_number}")
+
                 is_new_user = False
 
             except User.DoesNotExist:
-                # Create new user
                 user = User.objects.create_user(
                     username=google_data['email'],
                     email=google_data['email'],
@@ -69,11 +71,16 @@ class GoogleAuthView(APIView):
                     last_name=google_data.get('family_name', ''),
                     profile_picture=google_data.get('picture', ''),
                     is_email_verified=google_data.get('verified_email', False),
-                    role='student'  # Default role
+                    role='student'
                 )
+                print(f"New user created: {user.email}")
+
+                if user.role == 'student':
+                    student = Student.objects.create(user=user, registration_number=f"REG-{user.id}")
+                    print(f"Student created for new user: {student.registration_number}")
+
                 is_new_user = True
 
-            # Create or get social account
             social_account, _ = SocialAccount.objects.get_or_create(
                 user=user,
                 provider='google',
@@ -83,7 +90,6 @@ class GoogleAuthView(APIView):
                 }
             )
 
-            # Generate token
             token, _ = Token.objects.get_or_create(user=user)
 
             return Response({
@@ -95,6 +101,7 @@ class GoogleAuthView(APIView):
             })
 
         except Exception as e:
+            print(f"Exception: {str(e)}")
             return Response(
                 {'error': f'Authentication failed: {str(e)}'},
                 status=status.HTTP_400_BAD_REQUEST
