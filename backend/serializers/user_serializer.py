@@ -13,7 +13,7 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ['id', 'email', 'first_name', 'last_name', 'role', 'phone_number',
-                 'profile_picture', 'is_email_verified', 'created_at']
+                 'profile_picture', 'is_email_verified', 'created_at', 'password']
         read_only_fields = ['id', 'created_at', 'is_email_verified']
 
     def create(self, validated_data):
@@ -42,7 +42,10 @@ class GoogleAuthSerializer(serializers.Serializer):
             f'https://www.googleapis.com/oauth2/v1/tokeninfo?access_token={access_token}',
             timeout=5
         )
-        
+
+        print(f'Status Code: {response.status_code}')
+        print(f'Response Body: {response.json()}')
+
         if response.status_code != 200:
             raise serializers.ValidationError('Invalid access token')
         

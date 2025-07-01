@@ -13,14 +13,13 @@ from django.contrib.auth import get_user_model
 from backend.serializers.user_serializer import GoogleAuthSerializer, UserSerializer
 
 User = get_user_model()
-
 class GoogleAuthView(APIView):
     permission_classes = [AllowAny]
 
     def post(self, request):
         """Google OAuth authentication"""
         serializer = GoogleAuthSerializer(data=request.data)
-        
+
         if not serializer.is_valid():
             return Response(
                 {'error': 'Invalid access token'},
@@ -43,6 +42,7 @@ class GoogleAuthView(APIView):
                 )
 
             google_data = google_response.json()
+            print(f'Google Data: {google_data}')
 
             # Check if user exists
             try:
@@ -71,9 +71,6 @@ class GoogleAuthView(APIView):
                     is_email_verified=google_data.get('verified_email', False),
                     role='student'  # Default role
                 )
-
-                User.objects.create(user=user)
-
                 is_new_user = True
 
             # Create or get social account
