@@ -200,7 +200,7 @@ SOCIALACCOUNT_PROVIDERS = {
 
 # Google OAuth credentials (set these in your environment variables)
 SOCIALACCOUNT_PROVIDERS['google']['APP'] = {
-    'client_id': os.getenv('GOOGLE_CLIENT_ID'),
+    'client_id': os.getenv('GOOGLE_CLIENT_ID') ,
     'secret': os.getenv('GOOGLE_CLIENT_SECRET'),
     'key': ''
 }
