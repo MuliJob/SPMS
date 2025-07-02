@@ -1,5 +1,7 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
+
+from backend.views.proposal_upload import ProposalUploadView
 from .user_views import UserViewSet, StudentViewSet, SupervisorViewSet, ProjectViewSet, ProposalViewSet, AnnouncementViewSet, NotificationViewSet
 from .views.auth import CustomAuthToken,  LogoutView
 from .views.register import RegistrationView
@@ -11,7 +13,7 @@ from backend.views.lecturer import SubmittedTopicsView
 from backend.views.lecturer import ApproveTopicView, RejectTopicView, AssignSupervisorView
 from backend.views.lecturer import SupervisorListView
 from backend.views.supervisor_view import AssignedProjectsView, SupervisorProposalListView
-from backend.views.supervisor_view import SupervisorProposalListView, ProposalFeedbackView, ApproveProposalView, RejectProposalView
+from backend.views.supervisor_view import ProposalFeedbackView, ApproveProposalView, RejectProposalView
 
 
 
@@ -50,7 +52,7 @@ urlpatterns = [
     path('supervisor/assigned-projects/', AssignedProjectsView.as_view()),
     path('supervisor/proposals/', SupervisorProposalListView.as_view(), name='supervisor-proposals'),
     path('supervisor/proposals/', SupervisorProposalListView.as_view()),
-    path('api/proposals/', ProposalViewSet.as_view({'post': 'create', 'get': 'list'})),
+    path('projects/<int:project_id>/proposals', ProposalUploadView.as_view(), name='proposal-upload'),
     path('supervisor/proposals/<int:proposal_id>/feedback/', ProposalFeedbackView.as_view()),
     path('supervisor/proposals/<int:proposal_id>/approve/', ApproveProposalView.as_view()),
     path('supervisor/proposals/<int:proposal_id>/reject/', RejectProposalView.as_view()),
