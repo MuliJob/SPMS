@@ -10,7 +10,10 @@ from backend.views.student import SubmitTopicView
 from backend.views.lecturer import SubmittedTopicsView
 from backend.views.lecturer import ApproveTopicView, RejectTopicView, AssignSupervisorView
 from backend.views.lecturer import SupervisorListView
-from backend.views.supervisor_view import AssignedProjectsView
+from backend.views.supervisor_view import AssignedProjectsView, SupervisorProposalListView
+from backend.views.supervisor_view import SupervisorProposalListView, ProposalFeedbackView, ApproveProposalView, RejectProposalView
+
+
 
 
 
@@ -44,6 +47,12 @@ urlpatterns = [
     path('lecturer/topic/<int:pk>/assign-supervisor/', AssignSupervisorView.as_view(), name='assign-supervisor'),
     path('lecturer/supervisors/', SupervisorListView.as_view(), name='supervisor-list'),
     path('supervisor/assigned-projects/', AssignedProjectsView.as_view()),
+    path('supervisor/proposals/', SupervisorProposalListView.as_view(), name='supervisor-proposals'),
+    path('supervisor/proposals/', SupervisorProposalListView.as_view()),
+    path('api/proposals/', ProposalViewSet.as_view({'post': 'create', 'get': 'list'})),
+    path('supervisor/proposals/<int:proposal_id>/feedback/', ProposalFeedbackView.as_view()),
+    path('supervisor/proposals/<int:proposal_id>/approve/', ApproveProposalView.as_view()),
+    path('supervisor/proposals/<int:proposal_id>/reject/', RejectProposalView.as_view()),
 
 
 ]
