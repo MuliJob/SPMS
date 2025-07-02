@@ -1,14 +1,111 @@
+import requests
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework.permissions import AllowAny
 from rest_framework import status
 from rest_framework.authtoken.models import Token
+
+from allauth.socialaccount.models import SocialAccount
 
 from django.contrib.auth import authenticate
 from django.contrib.auth import get_user_model
 
-from backend.serializers.user_serializer import UserSerializer
+from backend.models.student import Student
+from backend.serializers.user_serializer import GoogleAuthSerializer, UserSerializer
 
 User = get_user_model()
+class GoogleAuthView(APIView):
+    permission_classes = [AllowAny]
+
+    def post(self, request):
+        """Google OAuth authentication"""
+        serializer = GoogleAuthSerializer(data=request.data)
+
+        if not serializer.is_valid():
+            return Response(
+                {'error': 'Invalid access token'},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        access_token = serializer.validated_data['access_token']
+
+        try:
+            google_response = requests.get(
+                f'https://www.googleapis.com/oauth2/v2/userinfo?access_token={access_token}',
+                timeout=5
+            )
+
+            if google_response.status_code != 200:
+                return Response(
+                    {'error': 'Failed to get user info from Google'},
+                    status=status.HTTP_400_BAD_REQUEST
+                )
+
+            google_data = google_response.json()
+            print(f'Google Data: {google_data}')
+
+            try:
+                user = User.objects.get(email=google_data['email'])
+                print(f"User exists: {user.email}")
+
+                if not user.first_name and google_data.get('given_name'):
+                    user.first_name = google_data['given_name']
+                if not user.last_name and google_data.get('family_name'):
+                    user.last_name = google_data['family_name']
+                if not user.profile_picture and google_data.get('picture'):
+                    user.profile_picture = google_data['picture']
+                user.is_email_verified = google_data.get('verified_email', False)
+                user.save()
+
+                if user.role == 'student' and not hasattr(user, 'student'):
+                    student = Student.objects.create(user=user, registration_number=f"REG-{user.id}")
+                    print(f"Student created for existing user: {student.registration_number}")
+
+                is_new_user = False
+
+            except User.DoesNotExist:
+                user = User.objects.create_user(
+                    username=google_data['email'],
+                    email=google_data['email'],
+                    first_name=google_data.get('given_name', ''),
+                    last_name=google_data.get('family_name', ''),
+                    profile_picture=google_data.get('picture', ''),
+                    is_email_verified=google_data.get('verified_email', False),
+                    role='student'
+                )
+                print(f"New user created: {user.email}")
+
+                if user.role == 'student':
+                    student = Student.objects.create(user=user, registration_number=f"REG-{user.id}")
+                    print(f"Student created for new user: {student.registration_number}")
+
+                is_new_user = True
+
+            social_account, _ = SocialAccount.objects.get_or_create(
+                user=user,
+                provider='google',
+                defaults={
+                    'uid': google_data['id'],
+                    'extra_data': google_data
+                }
+            )
+
+            token, _ = Token.objects.get_or_create(user=user)
+
+            return Response({
+                'token': token.key,
+                'user': UserSerializer(user).data,
+                'role': user.role,
+                'message': 'Google authentication successful',
+                'is_new_user': is_new_user
+            })
+
+        except Exception as e:
+            print(f"Exception: {str(e)}")
+            return Response(
+                {'error': f'Authentication failed: {str(e)}'},
+                status=status.HTTP_400_BAD_REQUEST
+            )
 
 class LoginView(APIView):
     def post(self, request):
