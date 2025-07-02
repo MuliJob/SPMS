@@ -19,7 +19,7 @@ class SubmittedTopicsView(APIView):
 class ApproveTopicView(APIView):
     permission_classes = [IsAuthenticated, IsLecturer]
 
-    def post(self, request, pk):
+    def patch(self, request, pk):
         try:
             project = Project.objects.get(pk=pk)
             project.status = 'approved'
@@ -32,7 +32,7 @@ class ApproveTopicView(APIView):
 class RejectTopicView(APIView):
     permission_classes = [IsAuthenticated, IsLecturer]
 
-    def post(self, request, pk):
+    def patch(self, request, pk):
         try:
             project = Project.objects.get(pk=pk)
             project.status = 'rejected'
