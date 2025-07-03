@@ -1316,3 +1316,35 @@ Not Found: /favicon.ico
 Not Found: /favicon.ico
 "GET /favicon.ico HTTP/1.1" 404 2674
 "GET /admin/account/emailaddress/ HTTP/1.1" 200 16057
+Watching for file changes with StatReloader
+Not Found: /api/supervisor/project/5/propoals/
+"GET /api/supervisor/project/5/propoals/ HTTP/1.1" 404 27013
+"GET /admin/backend/student/ HTTP/1.1" 200 23696
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/authtoken/tokenproxy/ HTTP/1.1" 200 26957
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2674
+"GET /api/supervisor/assigned-projects/ HTTP/1.1" 200 372
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /api/supervisor/assigned-projects/ HTTP/1.1" 200 392
+"GET /admin/authtoken/tokenproxy/ HTTP/1.1" 200 26957
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2674
+"GET /admin/account/emailaddress/ HTTP/1.1" 200 16057

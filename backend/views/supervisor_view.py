@@ -6,17 +6,15 @@ from backend.serializers.project_serializer import ProjectSerializer
 from backend.serializers.proposal_serializer import ProposalSerializer
 from backend.permissions import IsSupervisor
 from rest_framework import status
+from backend.serializers.project_serializer import ProjectWithProposalsSerializer
 
 class AssignedProjectsView(APIView):
     permission_classes = [IsAuthenticated, IsSupervisor]
 
     def get(self, request):
-        user = request.user
-        supervisor = user.supervisor
-
+        supervisor = request.user.supervisor
         assigned_projects = Project.objects.filter(supervisor=supervisor)
-        serializer = ProjectSerializer(assigned_projects, many=True)
-
+        serializer = ProjectWithProposalsSerializer(assigned_projects, many=True, context={'request': request})
         return Response(serializer.data)
 
 
