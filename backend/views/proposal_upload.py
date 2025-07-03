@@ -22,7 +22,7 @@ class ProposalUploadView(generics.CreateAPIView):
         logger.info(f"Request files: {request.FILES}")
 
         try:
-            # Inject project_id from URL into request.data
+            
             project_id = kwargs.get('project_id')
             mutable_data = request.data.copy()
             mutable_data['project'] = project_id

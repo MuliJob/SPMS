@@ -52,13 +52,18 @@ class Proposal(models.Model):
 
     @property
     def file_size_formatted(self):
-        """Return human-readable file size"""
-        size = self.file_size
-        for unit in ['B', 'KB', 'MB', 'GB']:
-            if size < 1024.0:
-                return f"{size:.1f} {unit}"
-            size /= 1024.0
-        return f"{size:.1f} TB"
+        if self.file_size is None:
+            return "Unknown"
+    
+        size = float(self.file_size)
+        if size < 1024.0:
+            return f"{size:.1f} B"
+        elif size < 1024.0**2:
+            return f"{size/1024.0:.1f} KB"
+        elif size < 1024.0**3:
+             return f"{size/(1024.0**2):.1f} MB"
+        else:
+            return f"{size/(1024.0**3):.1f} GB"
 
     class Meta:
         """Meta options for the Proposal model."""

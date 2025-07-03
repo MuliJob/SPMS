@@ -37,7 +37,7 @@ class GoogleAuthSerializer(serializers.Serializer):
     def validate_access_token(self, access_token):
         """Validate Google access token"""
         
-        # Verify token with Google
+        
         response = requests.get(
             f'https://www.googleapis.com/oauth2/v1/tokeninfo?access_token={access_token}',
             timeout=5
@@ -52,9 +52,9 @@ class GoogleAuthSerializer(serializers.Serializer):
         return access_token
 
     def create(self, validated_data):
-        # No-op implementation for abstract method
+    
         return validated_data
 
     def update(self, instance, validated_data):
-        # No-op implementation for abstract method
+        
         return instance

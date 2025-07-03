@@ -343,3 +343,554 @@ Proposal uploaded successfully: 3
 "GET /admin/backend/proposal/3/change/ HTTP/1.1" 200 33276
 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
 Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/views/proposal_upload.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Internal Server Error: /admin/backend/proposal/
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: backend_user.phone_number
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/contrib/admin/options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 234, in inner
+    if not self.has_permission(request):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 207, in has_permission
+    return request.user.is_active and request.user.is_staff
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/utils/functional.py", line 251, in inner
+    self._setup()
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/utils/functional.py", line 404, in _setup
+    self._wrapped = self._setupfunc()
+                    ^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/contrib/auth/middleware.py", line 39, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/contrib/auth/middleware.py", line 19, in get_user
+    request._cached_user = auth.get_user(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/contrib/auth/__init__.py", line 311, in get_user
+    user = backend.get_user(user_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/contrib/auth/backends.py", line 232, in get_user
+    user = UserModel._default_manager.get(pk=user_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/query.py", line 629, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/query.py", line 366, in __len__
+    self._fetch_all()
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/query.py", line 1935, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1622, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: backend_user.phone_number
+"GET /admin/backend/proposal/ HTTP/1.1" 500 200927
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2674
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /admin/backend/proposal/ HTTP/1.1" 200 16632
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/project/ HTTP/1.1" 200 18743
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/project/13/change/ HTTP/1.1" 200 24217
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/backend/project/13/change/ HTTP/1.1" 302 0
+"GET /admin/backend/project/ HTTP/1.1" 200 18955
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/proposal/ HTTP/1.1" 200 16632
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/project/ HTTP/1.1" 200 18743
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/project/5/change/ HTTP/1.1" 200 24194
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+Not Found: /api/supervisor/project/5/proposals/
+"GET /api/supervisor/project/5/proposals/ HTTP/1.1" 404 26401
+/home/muuo/Documents/SPMS/spms/backend/views/supervisor_view.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /admin/backend/notification/add/ HTTP/1.1" 200 20646
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2674
+/home/muuo/Documents/SPMS/spms/backend/views/supervisor_view.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/proposal_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/proposal_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/proposal_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/proposal_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/proposal_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/proposal_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /admin/backend/project/5/change/ HTTP/1.1" 200 24194
+"GET /admin/backend/project/5/change/ HTTP/1.1" 200 24194
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+Watching for file changes with StatReloader
+"GET /admin/backend/notification/add/ HTTP/1.1" 200 20646
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2674
+Internal Server Error: /api/supervisor/project/5/proposals/
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/views/supervisor_view.py", line 119, in get
+    return Response(serializer.data, status=status.HTTP_200_OK)
+                    ^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 715, in to_representation
+    return [
+           ^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 716, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 527, in to_representation
+    attribute = field.get_attribute(instance)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/models/proposal.py", line 58, in file_size_formatted
+    if size < 1024.0:
+       ^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'NoneType' and 'float'
+"GET /api/supervisor/project/5/proposals/ HTTP/1.1" 500 158490
+"GET /admin/backend/project/5/change/ HTTP/1.1" 200 24194
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/project/ HTTP/1.1" 200 18743
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/project/13/change/ HTTP/1.1" 200 24217
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/backend/project/13/change/ HTTP/1.1" 302 0
+"GET /admin/backend/project/ HTTP/1.1" 200 18955
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/project/13/change/ HTTP/1.1" 200 24217
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/backend/project/13/change/ HTTP/1.1" 302 0
+"GET /admin/backend/project/ HTTP/1.1" 200 18955
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/proposal/ HTTP/1.1" 200 16632
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/proposal/8/change/ HTTP/1.1" 200 31527
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+"GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-clock.svg HTTP/1.1" 304 0
+"GET /admin/backend/project/ HTTP/1.1" 200 18743
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/proposal/ HTTP/1.1" 200 16632
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/project/ HTTP/1.1" 200 18743
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/project/5/change/ HTTP/1.1" 200 24194
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/backend/project/5/change/ HTTP/1.1" 302 0
+"GET /admin/backend/project/ HTTP/1.1" 200 18950
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/authtoken/tokenproxy/ HTTP/1.1" 200 26469
+Internal Server Error: /api/supervisor/project/5/proposals/
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/views/supervisor_view.py", line 119, in get
+    return Response(serializer.data, status=status.HTTP_200_OK)
+                    ^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 715, in to_representation
+    return [
+           ^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 716, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 527, in to_representation
+    attribute = field.get_attribute(instance)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/models/proposal.py", line 58, in file_size_formatted
+    if size < 1024.0:
+       ^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'NoneType' and 'float'
+"GET /api/supervisor/project/5/proposals/ HTTP/1.1" 500 158490
+Watching for file changes with StatReloader
+Internal Server Error: /api/supervisor/project/5/proposals/
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/views/supervisor_view.py", line 119, in get
+    return Response(serializer.data, status=status.HTTP_200_OK)
+                    ^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 715, in to_representation
+    return [
+           ^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 716, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 527, in to_representation
+    attribute = field.get_attribute(instance)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/models/proposal.py", line 58, in file_size_formatted
+    if size < 1024.0:
+       ^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'NoneType' and 'float'
+"GET /api/supervisor/project/5/proposals/ HTTP/1.1" 500 158490
+/home/muuo/Documents/SPMS/spms/backend/models/proposal.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/models/proposal.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/models/proposal.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/models/proposal.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/models/proposal.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/models/proposal.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/models/proposal.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/models/proposal.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/models/proposal.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/models/proposal.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/models/proposal.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/models/proposal.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/models/proposal.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/models/proposal.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/models/proposal.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/models/proposal.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/models/proposal.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/models/proposal.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/models/proposal.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/supervisor/project/5/proposals/
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/views/supervisor_view.py", line 119, in get
+    return Response(serializer.data, status=status.HTTP_200_OK)
+                                            ^^^^^^
+NameError: name 'status' is not defined
+"GET /api/supervisor/project/5/proposals/ HTTP/1.1" 500 103120
+/home/muuo/Documents/SPMS/spms/backend/serializers/proposal_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/supervisor/project/5/proposals/
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/views/supervisor_view.py", line 119, in get
+    return Response(serializer.data, status=status.HTTP_200_OK)
+                                            ^^^^^^
+NameError: name 'status' is not defined
+"GET /api/supervisor/project/5/proposals/ HTTP/1.1" 500 103120
+/home/muuo/Documents/SPMS/spms/backend/serializers/proposal_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/supervisor/project/5/proposals/
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/views/supervisor_view.py", line 119, in get
+    return Response(serializer.data, status=status.HTTP_200_OK)
+                                            ^^^^^^
+NameError: name 'status' is not defined
+"GET /api/supervisor/project/5/proposals/ HTTP/1.1" 500 103120
+/home/muuo/Documents/SPMS/spms/backend/views/supervisor_view.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /api/supervisor/project/5/proposals/ HTTP/1.1" 200 473
+/home/muuo/Documents/SPMS/spms/backend/models/user.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/models/user.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /api/supervisor/project/5/proposals/ HTTP/1.1" 200 481
+/home/muuo/Documents/SPMS/spms/backend/serializers/user_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/user_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/user_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/models/proposal.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/proposal_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/proposal_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/proposal_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/proposal_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /admin/authtoken/tokenproxy/ HTTP/1.1" 200 26469
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2674
+"GET /admin/backend/notification/add/ HTTP/1.1" 200 20646
+"GET /admin/backend/proposal/ HTTP/1.1" 200 16632
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/proposal/8/change/ HTTP/1.1" 200 31527
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/project/ HTTP/1.1" 200 18743
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/project/5/change/ HTTP/1.1" 200 24194
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/backend/project/5/change/ HTTP/1.1" 302 0
+"GET /admin/backend/project/ HTTP/1.1" 200 18950
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/proposal/ HTTP/1.1" 200 16632
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/proposal/8/change/ HTTP/1.1" 200 31527
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/backend/proposal/8/change/ HTTP/1.1" 302 0
+"GET /admin/backend/proposal/ HTTP/1.1" 200 16856
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/proposal/ HTTP/1.1" 200 16632
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2674
+"GET /admin/account/emailaddress/ HTTP/1.1" 200 16057
+"GET /admin/authtoken/tokenproxy/ HTTP/1.1" 200 26469
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342

@@ -10,7 +10,10 @@ class ProjectSerializer(serializers.ModelSerializer):
         fields = ['id', 'title', 'description', 'status', 'submitted_at', 'student_name', 'student_reg_no']
 
     def get_student_name(self, obj):
-        return obj.student.get_full_name()
+        try:
+            return obj.student.get_full_name() or obj.student.username
+        except AttributeError:
+            return obj.student.username if obj.student else None
 
     def get_student_reg_no(self, obj):
-        return obj.student.student.registration_number if hasattr(obj.student, 'student') else None
+        return getattr(obj.student.student, 'registration_number', None)

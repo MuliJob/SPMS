@@ -4,6 +4,7 @@ from backend.models.project import Project
 from backend.serializers.project_serializer import ProjectSerializer
 from backend.serializers.user_serializer import UserSerializer
 
+
 class ProposalSerializer(serializers.ModelSerializer):
     submitted_by = UserSerializer(read_only=True)
     reviewed_by = UserSerializer(read_only=True)
@@ -17,6 +18,15 @@ class ProposalSerializer(serializers.ModelSerializer):
             'file_size', 'file_size_formatted', 'status',
             'feedback', 'reviewed_by', 'submitted_at', 'reviewed_at'
         ]
+
+
+        def get_file_url(self, obj):
+            request = self.context.get('request')
+            if obj.file and hasattr(obj.file, 'url'):
+                return request.build_absolute_uri(obj.file.url)
+            return None
+
+
 
 class ProposalUploadSerializer(serializers.ModelSerializer):
     """Serializer for uploading a proposal file with project association."""
@@ -33,17 +43,17 @@ class ProposalUploadSerializer(serializers.ModelSerializer):
         try:
             project = Project.objects.get(id=value)
             return value
-        except Project.DoesNotExist as exc:  # pylint: disable=no-member
+        except Project.DoesNotExist as exc:  
             raise serializers.ValidationError("Project not found or inactive") from exc
 
     def validate_proposal_file(self, value):
         """Validate the uploaded proposal file."""
-        # Check file size (10MB limit)
-        max_size = 10 * 1024 * 1024  # 10MB
+        
+        max_size = 10 * 1024 * 1024
         if value.size > max_size:
             raise serializers.ValidationError("File size cannot exceed 10MB")
 
-        # Check file extension
+        
         allowed_extensions = ['pdf', 'doc', 'docx']
         file_extension = value.name.split('.')[-1].lower()
         if file_extension not in allowed_extensions:
