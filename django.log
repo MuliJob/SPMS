@@ -894,3 +894,425 @@ Not Found: /favicon.ico
 "GET /admin/account/emailaddress/ HTTP/1.1" 200 16057
 "GET /admin/authtoken/tokenproxy/ HTTP/1.1" 200 26469
 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+Watching for file changes with StatReloader
+"OPTIONS /api/login/ HTTP/1.1" 200 0
+Bad Request: /api/login/
+"POST /api/login/ HTTP/1.1" 400 68
+"OPTIONS /api/register/ HTTP/1.1" 200 0
+"POST /api/register/ HTTP/1.1" 201 332
+"POST /api/login/ HTTP/1.1" 200 103
+"OPTIONS /api/supervisor/assigned-projects/ HTTP/1.1" 200 0
+"GET /api/supervisor/assigned-projects/ HTTP/1.1" 200 2
+"POST /api/login/ HTTP/1.1" 200 100
+"OPTIONS /api/dashboard/student/ HTTP/1.1" 200 0
+"GET /api/dashboard/student/ HTTP/1.1" 200 224
+Bad Request: /api/login/
+"POST /api/login/ HTTP/1.1" 400 68
+Bad Request: /api/register/
+"POST /api/register/ HTTP/1.1" 400 153
+Bad Request: /api/register/
+"POST /api/register/ HTTP/1.1" 400 42
+Bad Request: /api/register/
+"POST /api/register/ HTTP/1.1" 400 42
+Bad Request: /api/register/
+"POST /api/register/ HTTP/1.1" 400 112
+Bad Request: /api/register/
+"POST /api/register/ HTTP/1.1" 400 112
+Bad Request: /api/register/
+"POST /api/register/ HTTP/1.1" 400 112
+"POST /api/register/ HTTP/1.1" 201 328
+"POST /api/login/ HTTP/1.1" 200 101
+"OPTIONS /api/lecturer/submitted-topics/ HTTP/1.1" 200 0
+Internal Server Error: /api/lecturer/submitted-topics/
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/views/lecturer.py", line 17, in get
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 715, in to_representation
+    return [
+           ^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 716, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/fields.py", line 1870, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py", line 19, in get_student_reg_no
+    return getattr(obj.student.student, 'registration_number', None)
+                   ^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/fields/related_descriptors.py", line 531, in __get__
+    raise self.RelatedObjectDoesNotExist(
+backend.models.user.User.student.RelatedObjectDoesNotExist: User has no student.
+"GET /api/lecturer/submitted-topics/ HTTP/1.1" 500 139782
+"POST /api/login/ HTTP/1.1" 200 101
+Internal Server Error: /api/lecturer/submitted-topics/
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/views/lecturer.py", line 17, in get
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 715, in to_representation
+    return [
+           ^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 716, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/fields.py", line 1870, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py", line 19, in get_student_reg_no
+    return getattr(obj.student.student, 'registration_number', None)
+                   ^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/fields/related_descriptors.py", line 531, in __get__
+    raise self.RelatedObjectDoesNotExist(
+backend.models.user.User.student.RelatedObjectDoesNotExist: User has no student.
+"GET /api/lecturer/submitted-topics/ HTTP/1.1" 500 139782
+Watching for file changes with StatReloader
+Internal Server Error: /api/lecturer/submitted-topics/
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/views/lecturer.py", line 17, in get
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 715, in to_representation
+    return [
+           ^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 716, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/fields.py", line 1870, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py", line 19, in get_student_reg_no
+    return getattr(obj.student.student, 'registration_number', None)
+                   ^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/fields/related_descriptors.py", line 531, in __get__
+    raise self.RelatedObjectDoesNotExist(
+backend.models.user.User.student.RelatedObjectDoesNotExist: User has no student.
+"GET /api/lecturer/submitted-topics/ HTTP/1.1" 500 139400
+"GET /admin/authtoken/tokenproxy/ HTTP/1.1" 200 26957
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2674
+"GET /admin/backend/lecturer/ HTTP/1.1" 200 16608
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/project/ HTTP/1.1" 200 18743
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/project/13/change/ HTTP/1.1" 200 24356
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/authtoken/tokenproxy/ HTTP/1.1" 200 26957
+Internal Server Error: /api/lecturer/submitted-topics/
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/views/lecturer.py", line 17, in get
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 715, in to_representation
+    return [
+           ^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 716, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/fields.py", line 1870, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py", line 19, in get_student_reg_no
+    return getattr(obj.student.student, 'registration_number', None)
+                   ^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/fields/related_descriptors.py", line 531, in __get__
+    raise self.RelatedObjectDoesNotExist(
+backend.models.user.User.student.RelatedObjectDoesNotExist: User has no student.
+"GET /api/lecturer/submitted-topics/ HTTP/1.1" 500 139400
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/lecturer/submitted-topics/
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/views/lecturer.py", line 17, in get
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 715, in to_representation
+    return [
+           ^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 716, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/fields.py", line 1870, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py", line 19, in get_student_reg_no
+    return getattr(obj.user.student, 'registration_number', None)
+                   ^^^^^^^^
+AttributeError: 'Project' object has no attribute 'user'
+"GET /api/lecturer/submitted-topics/ HTTP/1.1" 500 134889
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/lecturer/submitted-topics/
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/views/lecturer.py", line 17, in get
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 715, in to_representation
+    return [
+           ^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 716, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/fields.py", line 1870, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py", line 19, in get_student_reg_no
+    return getattr(obj.student.student, 'registration_number', None)
+                   ^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/fields/related_descriptors.py", line 531, in __get__
+    raise self.RelatedObjectDoesNotExist(
+backend.models.user.User.student.RelatedObjectDoesNotExist: User has no student.
+"GET /api/lecturer/submitted-topics/ HTTP/1.1" 500 139400
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /api/lecturer/submitted-topics/ HTTP/1.1" 200 2030
+"GET /admin/backend/student/ HTTP/1.1" 200 23696
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/project/ HTTP/1.1" 200 18743
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/project/6/change/ HTTP/1.1" 200 24334
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/student/ HTTP/1.1" 200 23696
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"OPTIONS /api/login/ HTTP/1.1" 200 0
+"POST /api/login/ HTTP/1.1" 200 101
+"OPTIONS /api/lecturer/submitted-topics/ HTTP/1.1" 200 0
+"GET /api/lecturer/submitted-topics/ HTTP/1.1" 200 2030
+"OPTIONS /api/lecturer/supervisors/ HTTP/1.1" 200 0
+"GET /api/lecturer/supervisors/ HTTP/1.1" 200 258
+"OPTIONS /api/lecturer/topic/13/assign-supervisor/ HTTP/1.1" 200 0
+"POST /api/lecturer/topic/13/assign-supervisor/ HTTP/1.1" 200 100
+"GET /api/lecturer/submitted-topics/ HTTP/1.1" 200 2030
+"GET /api/lecturer/supervisors/ HTTP/1.1" 200 258
+"OPTIONS /api/lecturer/topic/12/approve/ HTTP/1.1" 200 0
+"POST /api/lecturer/topic/12/approve/ HTTP/1.1" 200 30
+"GET /api/lecturer/submitted-topics/ HTTP/1.1" 200 2031
+"GET /api/lecturer/supervisors/ HTTP/1.1" 200 258
+"OPTIONS /api/lecturer/topic/12/assign-supervisor/ HTTP/1.1" 200 0
+"POST /api/lecturer/topic/12/assign-supervisor/ HTTP/1.1" 200 97
+"GET /api/lecturer/submitted-topics/ HTTP/1.1" 200 2031
+"GET /api/lecturer/supervisors/ HTTP/1.1" 200 258
+"OPTIONS /api/lecturer/topic/8/approve/ HTTP/1.1" 200 0
+"POST /api/lecturer/topic/8/approve/ HTTP/1.1" 200 30
+"GET /api/lecturer/submitted-topics/ HTTP/1.1" 200 2032
+"GET /api/lecturer/supervisors/ HTTP/1.1" 200 258
+"POST /api/lecturer/topic/13/assign-supervisor/ HTTP/1.1" 200 100
+"GET /api/lecturer/submitted-topics/ HTTP/1.1" 200 2032
+"GET /api/lecturer/supervisors/ HTTP/1.1" 200 258
+"POST /api/login/ HTTP/1.1" 200 100
+"OPTIONS /api/dashboard/student/ HTTP/1.1" 200 0
+"GET /api/dashboard/student/ HTTP/1.1" 200 225
+"OPTIONS /api/projects/8/proposals HTTP/1.1" 200 0
+Proposal upload attempt by user: bibs
+Request data: <QueryDict: {'project_id': ['8'], 'proposal_file': [<InMemoryUploadedFile: proposal.docx (application/octet-stream)>]}>
+Request files: <MultiValueDict: {'proposal_file': [<InMemoryUploadedFile: proposal.docx (application/octet-stream)>]}>
+Proposal uploaded successfully: 9
+"POST /api/projects/8/proposals HTTP/1.1" 201 746
+"POST /api/login/ HTTP/1.1" 200 103
+"OPTIONS /api/supervisor/assigned-projects/ HTTP/1.1" 200 0
+"GET /api/supervisor/assigned-projects/ HTTP/1.1" 200 372
+"POST /api/login/ HTTP/1.1" 200 103
+"GET /api/supervisor/assigned-projects/ HTTP/1.1" 200 372
+"GET /admin/backend/student/ HTTP/1.1" 200 23696
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2674
+"GET /admin/account/emailaddress/ HTTP/1.1" 200 16057
+"GET /admin/backend/student/ HTTP/1.1" 200 23696
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2674
+"GET /admin/account/emailaddress/ HTTP/1.1" 200 16057

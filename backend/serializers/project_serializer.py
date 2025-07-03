@@ -16,4 +16,10 @@ class ProjectSerializer(serializers.ModelSerializer):
             return obj.student.username if obj.student else None
 
     def get_student_reg_no(self, obj):
-        return getattr(obj.student.student, 'registration_number', None)
+        user = obj.student
+        try:
+            return user.student.registration_number
+        except AttributeError:
+            return None
+        except user._meta.model.student.RelatedObjectDoesNotExist:
+            return None
