@@ -1348,3 +1348,559 @@ Watching for file changes with StatReloader
 Not Found: /favicon.ico
 "GET /favicon.ico HTTP/1.1" 404 2674
 "GET /admin/account/emailaddress/ HTTP/1.1" 200 16057
+"OPTIONS /api/login/ HTTP/1.1" 200 0
+"POST /api/login/ HTTP/1.1" 200 100
+"OPTIONS /api/dashboard/student/ HTTP/1.1" 200 0
+"GET /api/dashboard/student/ HTTP/1.1" 200 318
+"OPTIONS /api/projects/8/proposals HTTP/1.1" 200 0
+Proposal upload attempt by user: bibs
+Request data: <QueryDict: {'project_id': ['8'], 'proposal_file': [<InMemoryUploadedFile: proposal.docx (application/octet-stream)>]}>
+Request files: <MultiValueDict: {'proposal_file': [<InMemoryUploadedFile: proposal.docx (application/octet-stream)>]}>
+Proposal uploaded successfully: 10
+"POST /api/projects/8/proposals HTTP/1.1" 201 755
+"POST /api/login/ HTTP/1.1" 200 103
+"OPTIONS /api/supervisor/assigned-projects/ HTTP/1.1" 200 0
+"GET /api/supervisor/assigned-projects/ HTTP/1.1" 200 392
+"POST /api/login/ HTTP/1.1" 200 101
+"OPTIONS /api/lecturer/submitted-topics/ HTTP/1.1" 200 0
+"GET /api/lecturer/submitted-topics/ HTTP/1.1" 200 2032
+"OPTIONS /api/lecturer/supervisors/ HTTP/1.1" 200 0
+"GET /api/lecturer/supervisors/ HTTP/1.1" 200 258
+"OPTIONS /api/lecturer/topic/8/assign-supervisor/ HTTP/1.1" 200 0
+"POST /api/lecturer/topic/8/assign-supervisor/ HTTP/1.1" 200 94
+"GET /api/lecturer/submitted-topics/ HTTP/1.1" 200 2032
+"GET /api/lecturer/supervisors/ HTTP/1.1" 200 258
+"POST /api/login/ HTTP/1.1" 200 100
+"GET /api/dashboard/student/ HTTP/1.1" 200 412
+Proposal upload attempt by user: bibs
+Request data: <QueryDict: {'project_id': ['8'], 'proposal_file': [<InMemoryUploadedFile: proposal.docx (application/octet-stream)>]}>
+Request files: <MultiValueDict: {'proposal_file': [<InMemoryUploadedFile: proposal.docx (application/octet-stream)>]}>
+Proposal uploaded successfully: 11
+"POST /api/projects/8/proposals HTTP/1.1" 201 755
+"POST /api/login/ HTTP/1.1" 200 103
+Internal Server Error: /api/supervisor/assigned-projects/
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Proposal' object has no attribute 'title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/views/supervisor_view.py", line 18, in get
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 715, in to_representation
+    return [
+           ^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 716, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 715, in to_representation
+    return [
+           ^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 716, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 527, in to_representation
+    attribute = field.get_attribute(instance)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `title` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Proposal` instance.
+Original exception text was: 'Proposal' object has no attribute 'title'.
+"GET /api/supervisor/assigned-projects/ HTTP/1.1" 500 161119
+"POST /api/login/ HTTP/1.1" 200 100
+"GET /api/dashboard/student/ HTTP/1.1" 200 506
+Proposal upload attempt by user: bibs
+Request data: <QueryDict: {'project_id': ['8'], 'proposal_file': [<InMemoryUploadedFile: proposal.docx (application/octet-stream)>]}>
+Request files: <MultiValueDict: {'proposal_file': [<InMemoryUploadedFile: proposal.docx (application/octet-stream)>]}>
+Proposal uploaded successfully: 12
+"POST /api/projects/8/proposals HTTP/1.1" 201 755
+"OPTIONS /api/dashboard/student/submit-topic/ HTTP/1.1" 200 0
+Bad Request: /api/dashboard/student/submit-topic/
+"POST /api/dashboard/student/submit-topic/ HTTP/1.1" 400 47
+"GET /api/dashboard/student/ HTTP/1.1" 200 600
+"POST /api/login/ HTTP/1.1" 200 103
+Internal Server Error: /api/supervisor/assigned-projects/
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Proposal' object has no attribute 'title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/views/supervisor_view.py", line 18, in get
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 715, in to_representation
+    return [
+           ^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 716, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 715, in to_representation
+    return [
+           ^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 716, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 527, in to_representation
+    attribute = field.get_attribute(instance)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `title` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Proposal` instance.
+Original exception text was: 'Proposal' object has no attribute 'title'.
+"GET /api/supervisor/assigned-projects/ HTTP/1.1" 500 161162
+"GET /admin/authtoken/tokenproxy/ HTTP/1.1" 200 26957
+"GET /admin/account/emailaddress/ HTTP/1.1" 200 16057
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/supervisor/ HTTP/1.1" 200 18573
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/supervisor/12/change/ HTTP/1.1" 200 20434
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/backend/supervisor/12/change/ HTTP/1.1" 302 0
+"GET /admin/backend/supervisor/ HTTP/1.1" 200 18785
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/student/ HTTP/1.1" 200 23696
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/proposal/ HTTP/1.1" 200 17830
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/proposal/12/change/ HTTP/1.1" 200 32036
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/backend/proposal/12/change/ HTTP/1.1" 302 0
+"GET /admin/backend/proposal/ HTTP/1.1" 200 18053
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/proposal/ HTTP/1.1" 200 17830
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/proposal/12/change/ HTTP/1.1" 200 32036
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/backend/proposal/12/change/ HTTP/1.1" 302 0
+"GET /admin/backend/proposal/ HTTP/1.1" 200 18053
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+Internal Server Error: /api/supervisor/assigned-projects/
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Proposal' object has no attribute 'title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/views/supervisor_view.py", line 18, in get
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 715, in to_representation
+    return [
+           ^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 716, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 715, in to_representation
+    return [
+           ^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 716, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 527, in to_representation
+    attribute = field.get_attribute(instance)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `title` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Proposal` instance.
+Original exception text was: 'Proposal' object has no attribute 'title'.
+"GET /api/supervisor/assigned-projects/ HTTP/1.1" 500 159839
+Watching for file changes with StatReloader
+Internal Server Error: /api/supervisor/assigned-projects/
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Proposal' object has no attribute 'title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/views/supervisor_view.py", line 18, in get
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 715, in to_representation
+    return [
+           ^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 716, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 715, in to_representation
+    return [
+           ^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 716, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 527, in to_representation
+    attribute = field.get_attribute(instance)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `title` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Proposal` instance.
+Original exception text was: 'Proposal' object has no attribute 'title'.
+"GET /api/supervisor/assigned-projects/ HTTP/1.1" 500 159839
+/home/muuo/Documents/SPMS/spms/backend/views/supervisor_view.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/views/supervisor_view.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/supervisor/assigned-projects/
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Proposal' object has no attribute 'title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/views/supervisor_view.py", line 18, in get
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 715, in to_representation
+    return [
+           ^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 716, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 715, in to_representation
+    return [
+           ^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 716, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 527, in to_representation
+    attribute = field.get_attribute(instance)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `title` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Proposal` instance.
+Original exception text was: 'Proposal' object has no attribute 'title'.
+"GET /api/supervisor/assigned-projects/ HTTP/1.1" 500 159839
+/home/muuo/Documents/SPMS/spms/backend/views/supervisor_view.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/supervisor/assigned-projects/
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Proposal' object has no attribute 'title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/views/supervisor_view.py", line 18, in get
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 715, in to_representation
+    return [
+           ^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 716, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 715, in to_representation
+    return [
+           ^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 716, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 527, in to_representation
+    attribute = field.get_attribute(instance)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `title` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Proposal` instance.
+Original exception text was: 'Proposal' object has no attribute 'title'.
+"GET /api/supervisor/assigned-projects/ HTTP/1.1" 500 159839
+"GET /admin/backend/proposal/ HTTP/1.1" 200 17830
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2674
+"GET /admin/backend/proposal/ HTTP/1.1" 200 17830
+Internal Server Error: /api/supervisor/assigned-projects/
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Proposal' object has no attribute 'title'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/views/supervisor_view.py", line 18, in get
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 715, in to_representation
+    return [
+           ^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 716, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 715, in to_representation
+    return [
+           ^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 716, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 527, in to_representation
+    attribute = field.get_attribute(instance)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `title` on serializer `ProjectSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Proposal` instance.
+Original exception text was: 'Proposal' object has no attribute 'title'.
+"GET /api/supervisor/assigned-projects/ HTTP/1.1" 500 159839
+Watching for file changes with StatReloader
