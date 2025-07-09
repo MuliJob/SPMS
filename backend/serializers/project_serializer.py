@@ -1,5 +1,7 @@
 from rest_framework import serializers
-from backend.models import Project
+from backend.models import Project, Proposal
+
+
 
 
 class ProjectSerializer(serializers.ModelSerializer):
@@ -28,26 +30,33 @@ class ProjectSerializer(serializers.ModelSerializer):
 
 
 
-class ProjectWithProposalsSerializer(serializers.ModelSerializer):
-    proposals = ProjectSerializer(many=True, read_only=True)
+
+class ProjectProposalsSerializer(serializers.ModelSerializer):
+    proposals = serializers.SerializerMethodField()
     student_name = serializers.SerializerMethodField()
     student_reg_no = serializers.SerializerMethodField()
 
     class Meta:
         model = Project
         fields = [
-            'id', 'title', 'description', 'status', 'submitted_at',
-            'student_name', 'student_reg_no', 'proposals',
+            'id',
+            'title',
+            'description',
+            'status',
+            'submitted_at',
+            'student_name',
+            'student_reg_no',
+            'proposals'
         ]
 
     def get_student_name(self, obj):
-        try:
-            return obj.student.student.full_name
-        except Exception:
-            return ""
+        return getattr(obj.student.student.user, 'full_name', '') if obj.student else None
 
     def get_student_reg_no(self, obj):
-        try:
-            return obj.student.student.registration_number
-        except Exception:
-            return ""
+        return getattr(obj.student.student, 'registration_number', '') if obj.student else None
+
+    def get_proposals(self, obj):
+        proposals = Proposal.objects.filter(project=obj)
+        from backend.serializers.proposal_serializer import ProposalSerializer
+        return ProposalSerializer(proposals, many=True, context=self.context).data
+
