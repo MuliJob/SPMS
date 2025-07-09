@@ -6,16 +6,25 @@ from backend.serializers.project_serializer import ProjectSerializer
 from backend.serializers.proposal_serializer import ProposalSerializer
 from backend.permissions import IsSupervisor
 from rest_framework import status
-from backend.serializers.project_serializer import ProjectWithProposalsSerializer
+from backend.serializers.project_serializer import ProjectProposalsSerializer
+
+
 
 class AssignedProjectsView(APIView):
     permission_classes = [IsAuthenticated, IsSupervisor]
 
     def get(self, request):
-        supervisor = request.user.supervisor
+        supervisor = getattr(request.user, 'supervisor', None)
+        if supervisor is None:
+            return Response({'detail': 'Supervisor profile not found.'}, status=400)
+
         assigned_projects = Project.objects.filter(supervisor=supervisor)
-        serializer = ProjectWithProposalsSerializer(assigned_projects, many=True, context={'request': request})
-        return Response(serializer.data)
+
+        serializer = ProjectProposalsSerializer(assigned_projects, many=True, context={'request': request})
+
+        return Response(serializer.data) 
+        
+      
 
 
 class SupervisorProposalListView(APIView):
