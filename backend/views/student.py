@@ -13,14 +13,15 @@ class SubmitTopicView(APIView):
         description = request.data.get('description')
 
         try:
-            
-            Student.objects.get(user=request.user)
+            student = request.user.student  
 
-            if Project.objects.filter(student=request.user).exists():
+            
+            if Project.objects.filter(student=student).exists():
                 return Response({"error": "You have already submitted a topic."}, status=status.HTTP_400_BAD_REQUEST)
 
+        
             Project.objects.create(
-                student=request.user,
+                student=student,
                 title=title,
                 description=description,
                 status='pending'

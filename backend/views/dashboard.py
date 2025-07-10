@@ -12,11 +12,13 @@ class StudentDashboardView(APIView):
     def get(self, request):
         user = request.user
         if hasattr(user, 'student'):
-            proposals = Proposal.objects.filter(project__student=user).values(
+            student = user.student  
+
+            proposals = Proposal.objects.filter(project__student=student).values(
                 'project__title', 'status', 'submitted_at'
             )
             notifications = Notification.objects.filter(user=user, read=False).values('message', 'created_at')
-            project = Project.objects.filter(student=user).first()
+            project = Project.objects.filter(student=student).first()  
 
             project_data = None
             if project:
@@ -31,7 +33,7 @@ class StudentDashboardView(APIView):
             return Response({
                 "proposals": list(proposals),
                 "notifications": list(notifications),
-                "registration_number": user.student.registration_number,
+                "registration_number": student.registration_number,
                 "full_name": user.get_full_name(),
                 "project": project_data,
             })
@@ -50,6 +52,8 @@ class SupervisorDashboardView(APIView):
         feedback_given = proposals.exclude(feedback__isnull=True).count()
 
         return Response({
+            'name': request.user.get_full_name(),
+            'email': request.user.email,
             'supervised_students': supervised_projects.count(),
             'received_proposals': proposals.count(),
             'feedback_given': feedback_given

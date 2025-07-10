@@ -14,18 +14,21 @@ class ProjectSerializer(serializers.ModelSerializer):
 
     def get_student_name(self, obj):
         try:
-            return obj.student.get_full_name() or obj.student.username
-        except AttributeError:
-            return obj.student.username if obj.student else None
+            return obj.student.user.get_full_name()
+        except Exception:
+            return None
 
     def get_student_reg_no(self, obj):
-        user = obj.student
         try:
-            return user.student.registration_number
-        except AttributeError:
+            return obj.student.registration_number
+        except Exception:
             return None
-        except user._meta.model.student.RelatedObjectDoesNotExist:
+
+        try:
+            return obj.student.registration_number
+        except Exception:
             return None
+
 
 
 
@@ -50,10 +53,17 @@ class ProjectProposalsSerializer(serializers.ModelSerializer):
         ]
 
     def get_student_name(self, obj):
-        return getattr(obj.student.student.user, 'full_name', '') if obj.student else None
+        try:
+            return obj.student.user.get_full_name()
+        except Exception:
+            return None
 
     def get_student_reg_no(self, obj):
-        return getattr(obj.student.student, 'registration_number', '') if obj.student else None
+        try:
+            return obj.student.registration_number
+        except Exception:
+            return None
+
 
     def get_proposals(self, obj):
         proposals = Proposal.objects.filter(project=obj)

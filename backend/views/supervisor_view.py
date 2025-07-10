@@ -87,27 +87,6 @@ class RejectProposalView(APIView):
         return Response({"message": "Proposal rejected."}, status=200)
 
 
-class ProposalApprovalView(APIView):
-    permission_classes = [IsAuthenticated, IsSupervisor]
-
-    def post(self, request, proposal_id, action):
-        try:
-            proposal = Proposal.objects.get(id=proposal_id)
-            if proposal.project.supervisor.user != request.user:
-                return Response({'detail': 'Not authorized'}, status=403)
-
-            if action == 'approve':
-                proposal.status = 'approved'
-            elif action == 'reject':
-                proposal.status = 'rejected'
-            else:
-                return Response({'detail': 'Invalid action'}, status=400)
-
-            proposal.save()
-            return Response({'message': f'Proposal {action}d successfully.'})
-        except Proposal.DoesNotExist:
-            return Response({'detail': 'Proposal not found'}, status=404)
-
 
 
 class ProjectProposalsView(APIView):

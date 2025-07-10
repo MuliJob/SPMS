@@ -2912,3 +2912,907 @@ Not Found: /api/proposals/9/reject/
 "GET /api/lecturer/submitted-topics/ HTTP/1.1" 200 2033
 "OPTIONS /api/lecturer/supervisors/ HTTP/1.1" 200 0
 "GET /api/lecturer/supervisors/ HTTP/1.1" 200 258
+"OPTIONS /api/register/ HTTP/1.1" 200 0
+"POST /api/register/ HTTP/1.1" 201 332
+"POST /api/login/ HTTP/1.1" 200 103
+"OPTIONS /api/dashboard/student/ HTTP/1.1" 200 0
+"GET /api/dashboard/student/ HTTP/1.1" 200 96
+"OPTIONS /api/dashboard/student/submit-topic/ HTTP/1.1" 200 0
+"POST /api/dashboard/student/submit-topic/ HTTP/1.1" 201 51
+"GET /api/dashboard/student/ HTTP/1.1" 200 226
+"POST /api/login/ HTTP/1.1" 200 101
+"GET /api/lecturer/submitted-topics/ HTTP/1.1" 200 2219
+"GET /api/lecturer/supervisors/ HTTP/1.1" 200 258
+"OPTIONS /api/lecturer/topic/14/approve/ HTTP/1.1" 200 0
+"POST /api/lecturer/topic/14/approve/ HTTP/1.1" 200 30
+"GET /api/lecturer/submitted-topics/ HTTP/1.1" 200 2220
+"GET /api/lecturer/supervisors/ HTTP/1.1" 200 258
+"OPTIONS /api/lecturer/topic/14/assign-supervisor/ HTTP/1.1" 200 0
+"POST /api/lecturer/topic/14/assign-supervisor/ HTTP/1.1" 200 99
+"GET /api/lecturer/submitted-topics/ HTTP/1.1" 200 2220
+"GET /api/lecturer/supervisors/ HTTP/1.1" 200 258
+"POST /api/login/ HTTP/1.1" 200 103
+"GET /api/supervisor/assigned-projects/ HTTP/1.1" 200 4082
+"POST /api/login/ HTTP/1.1" 200 103
+"GET /api/dashboard/student/ HTTP/1.1" 200 227
+"OPTIONS /api/projects/14/proposals HTTP/1.1" 200 0
+Proposal upload attempt by user: mumojoy
+Request data: <QueryDict: {'project_id': ['14'], 'proposal_file': [<InMemoryUploadedFile: arc (1).docx (application/octet-stream)>]}>
+Request files: <MultiValueDict: {'proposal_file': [<InMemoryUploadedFile: arc (1).docx (application/octet-stream)>]}>
+Proposal uploaded successfully: 13
+"POST /api/projects/14/proposals HTTP/1.1" 201 752
+"POST /api/login/ HTTP/1.1" 200 103
+"GET /api/supervisor/assigned-projects/ HTTP/1.1" 200 4799
+"OPTIONS /api/proposals/13/approve/ HTTP/1.1" 200 0
+Not Found: /api/proposals/13/approve/
+"POST /api/proposals/13/approve/ HTTP/1.1" 404 26987
+/home/muuo/Documents/SPMS/spms/backend/views/supervisor_view.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/views/supervisor_view.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /api/proposals/13/approve/
+"POST /api/proposals/13/approve/ HTTP/1.1" 404 26687
+"GET /admin/backend/proposal/ HTTP/1.1" 200 18142
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/proposal/13/change/ HTTP/1.1" 200 32174
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/backend/proposal/13/change/ HTTP/1.1" 302 0
+"GET /admin/backend/proposal/ HTTP/1.1" 200 18371
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/supervisor/ HTTP/1.1" 200 18571
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/supervisor/12/change/ HTTP/1.1" 200 20492
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/authtoken/tokenproxy/ HTTP/1.1" 200 27202
+Not Found: /api/proposals/13/approve/
+"POST /api/proposals/13/approve/ HTTP/1.1" 404 26687
+"GET /admin/backend/proposal/ HTTP/1.1" 200 18142
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/proposal/13/change/ HTTP/1.1" 200 32174
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/backend/proposal/13/change/ HTTP/1.1" 302 0
+"GET /admin/backend/proposal/ HTTP/1.1" 200 18371
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/proposal/13/change/ HTTP/1.1" 200 32174
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/backend/proposal/13/change/ HTTP/1.1" 302 0
+"GET /admin/backend/proposal/ HTTP/1.1" 200 18371
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+Not Found: /api/proposals/13/approve/
+"POST /api/proposals/13/approve/ HTTP/1.1" 404 26687
+/home/muuo/Documents/SPMS/spms/backend/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /api/proposals/13/approve/
+"POST /api/proposals/13/approve/ HTTP/1.1" 404 26687
+Not Found: /api/proposals/13/approve/
+"POST /api/proposals/13/approve/ HTTP/1.1" 404 26687
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"OPTIONS /api/login/ HTTP/1.1" 200 0
+"POST /api/login/ HTTP/1.1" 200 103
+"OPTIONS /api/supervisor/assigned-projects/ HTTP/1.1" 200 0
+"GET /api/supervisor/assigned-projects/ HTTP/1.1" 200 4797
+"OPTIONS /api/proposals/12/approve/ HTTP/1.1" 200 0
+Not Found: /api/proposals/12/approve/
+"POST /api/proposals/12/approve/ HTTP/1.1" 404 26687
+"OPTIONS /api/proposals/11/reject/ HTTP/1.1" 200 0
+Not Found: /api/proposals/11/reject/
+"POST /api/proposals/11/reject/ HTTP/1.1" 404 26684
+"OPTIONS /api/proposals/13/approve/ HTTP/1.1" 200 0
+Not Found: /api/proposals/13/approve/
+"POST /api/proposals/13/approve/ HTTP/1.1" 404 26687
+"OPTIONS /api/proposals/12/reject/ HTTP/1.1" 200 0
+Not Found: /api/proposals/12/reject/
+"POST /api/proposals/12/reject/ HTTP/1.1" 404 26684
+Not Found: /api/proposals/13/approve/
+"POST /api/proposals/13/approve/ HTTP/1.1" 404 26687
+"GET /admin/backend/proposal/ HTTP/1.1" 200 18142
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2674
+"GET /admin/backend/proposal/ HTTP/1.1" 200 18142
+"GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+"GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+"GET /static/admin/js/core.js HTTP/1.1" 304 0
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+"GET /static/admin/js/actions.js HTTP/1.1" 304 0
+"GET /static/admin/js/filters.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/proposal/13/change/ HTTP/1.1" 200 32174
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/css/forms.css HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+"GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+"GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+Watching for file changes with StatReloader
+"GET /admin/backend/proposal/13/change/ HTTP/1.1" 200 32174
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2674
+"OPTIONS /api/login/ HTTP/1.1" 200 0
+"POST /api/login/ HTTP/1.1" 200 103
+"OPTIONS /api/supervisor/assigned-projects/ HTTP/1.1" 200 0
+"GET /api/supervisor/assigned-projects/ HTTP/1.1" 200 4797
+"OPTIONS /api/supervisor/proposals/13/approve/ HTTP/1.1" 200 0
+"POST /api/supervisor/proposals/13/approve/ HTTP/1.1" 200 32
+"GET /api/supervisor/assigned-projects/ HTTP/1.1" 200 4798
+"POST /api/supervisor/proposals/13/approve/ HTTP/1.1" 200 32
+"GET /api/supervisor/assigned-projects/ HTTP/1.1" 200 4798
+"GET /admin/backend/proposal/ HTTP/1.1" 200 18142
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+"GET /admin/backend/proposal/13/change/ HTTP/1.1" 200 32174
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/backend/proposal/13/change/ HTTP/1.1" 302 0
+"GET /admin/backend/proposal/ HTTP/1.1" 200 18371
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+"POST /api/supervisor/proposals/13/approve/ HTTP/1.1" 200 32
+"GET /api/supervisor/assigned-projects/ HTTP/1.1" 200 4798
+"GET /admin/backend/student/ HTTP/1.1" 200 23981
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /api/login/ HTTP/1.1" 200 103
+"OPTIONS /api/dashboard/student/ HTTP/1.1" 200 0
+"GET /api/dashboard/student/ HTTP/1.1" 200 327
+/home/muuo/Documents/SPMS/spms/backend/models/project.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/models/project.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/models/project.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/models/project.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/models/project.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/models/project.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/models/project.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/views/dashboard.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"OPTIONS /api/login/ HTTP/1.1" 200 0
+"POST /api/login/ HTTP/1.1" 200 103
+"OPTIONS /api/lecturer/supervisors/ HTTP/1.1" 200 0
+"OPTIONS /api/supervisor/assigned-projects/ HTTP/1.1" 200 0
+Forbidden: /api/lecturer/supervisors/
+"GET /api/lecturer/supervisors/ HTTP/1.1" 403 63
+Internal Server Error: /api/supervisor/assigned-projects/
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/fields/related_descriptors.py", line 240, in __get__
+    rel_obj = self.field.get_cached_value(instance)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/fields/mixins.py", line 37, in get_cached_value
+    return instance._state.fields_cache[self.cache_name]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'student'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/views/supervisor_view.py", line 25, in get
+    return Response(serializer.data)
+                   ^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 715, in to_representation
+    return [
+           ^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 716, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/fields.py", line 1870, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py", line 53, in get_student_name
+    return getattr(obj.student.student.user, 'full_name', '') if obj.student else None
+                                                                 ^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/fields/related_descriptors.py", line 258, in __get__
+    rel_obj = self.get_object(instance)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/fields/related_descriptors.py", line 221, in get_object
+    return qs.get(self.field.get_reverse_related_filter(instance))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/query.py", line 633, in get
+    raise self.model.DoesNotExist(
+backend.models.student.Student.DoesNotExist: Student matching query does not exist.
+"GET /api/supervisor/assigned-projects/ HTTP/1.1" 500 161761
+"GET /admin/backend/student/ HTTP/1.1" 200 23981
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2674
+/home/muuo/Documents/SPMS/spms/backend/models/project.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/models/project.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/models/project.py changed, reloading.
+Watching for file changes with StatReloader
+"OPTIONS /api/login/ HTTP/1.1" 200 0
+"POST /api/login/ HTTP/1.1" 200 103
+"OPTIONS /api/dashboard/student/ HTTP/1.1" 200 0
+Internal Server Error: /api/dashboard/student/
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/views/dashboard.py", line 15, in get
+    proposals = Proposal.objects.filter(project__student=user).values(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/query.py", line 1481, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/query.py", line 1499, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/query.py", line 1506, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1643, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1675, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1560, in build_filter
+    self.check_related_objects(join_info.final_field, value, join_info.opts)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1369, in check_related_objects
+    self.check_query_object_type(value, opts, field)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1346, in check_query_object_type
+    raise ValueError(
+ValueError: Cannot query "mumojoy (student)": Must be "Student" instance.
+"GET /api/dashboard/student/ HTTP/1.1" 500 147543
+"POST /api/login/ HTTP/1.1" 200 101
+"OPTIONS /api/lecturer/submitted-topics/ HTTP/1.1" 200 0
+Internal Server Error: /api/lecturer/submitted-topics/
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/fields/related_descriptors.py", line 240, in __get__
+    rel_obj = self.field.get_cached_value(instance)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/fields/mixins.py", line 37, in get_cached_value
+    return instance._state.fields_cache[self.cache_name]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+KeyError: 'student'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/views/lecturer.py", line 17, in get
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 715, in to_representation
+    return [
+           ^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 716, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/fields.py", line 1870, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py", line 17, in get_student_name
+    return obj.student.get_full_name() or obj.student.username
+           ^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/fields/related_descriptors.py", line 258, in __get__
+    rel_obj = self.get_object(instance)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/fields/related_descriptors.py", line 221, in get_object
+    return qs.get(self.field.get_reverse_related_filter(instance))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/query.py", line 633, in get
+    raise self.model.DoesNotExist(
+backend.models.student.Student.DoesNotExist: Student matching query does not exist.
+"GET /api/lecturer/submitted-topics/ HTTP/1.1" 500 162147
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/serializers/project_serializer.py changed, reloading.
+Watching for file changes with StatReloader
+"OPTIONS /api/login/ HTTP/1.1" 200 0
+"POST /api/login/ HTTP/1.1" 200 103
+"OPTIONS /api/supervisor/assigned-projects/ HTTP/1.1" 200 0
+"OPTIONS /api/lecturer/supervisors/ HTTP/1.1" 200 0
+Forbidden: /api/lecturer/supervisors/
+"GET /api/lecturer/supervisors/ HTTP/1.1" 403 63
+"GET /api/supervisor/assigned-projects/ HTTP/1.1" 200 4755
+"OPTIONS /api/supervisor/proposals/12/approve/ HTTP/1.1" 200 0
+"POST /api/supervisor/proposals/12/approve/ HTTP/1.1" 200 32
+"GET /api/supervisor/assigned-projects/ HTTP/1.1" 200 4756
+"OPTIONS /api/supervisor/proposals/13/approve/ HTTP/1.1" 200 0
+"POST /api/supervisor/proposals/13/approve/ HTTP/1.1" 200 32
+"GET /api/supervisor/assigned-projects/ HTTP/1.1" 200 4756
+"GET /admin/backend/student/ HTTP/1.1" 200 23981
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2674
+"GET /admin/backend/proposal/ HTTP/1.1" 200 18142
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/proposal/13/change/ HTTP/1.1" 200 32174
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/backend/proposal/13/change/ HTTP/1.1" 302 0
+"GET /admin/backend/proposal/ HTTP/1.1" 200 18371
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /api/login/ HTTP/1.1" 200 101
+"OPTIONS /api/lecturer/submitted-topics/ HTTP/1.1" 200 0
+"GET /api/lecturer/submitted-topics/ HTTP/1.1" 200 2140
+"GET /api/lecturer/supervisors/ HTTP/1.1" 200 258
+"POST /api/login/ HTTP/1.1" 200 103
+"OPTIONS /api/dashboard/student/ HTTP/1.1" 200 0
+Internal Server Error: /api/dashboard/student/
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/views/dashboard.py", line 15, in get
+    proposals = Proposal.objects.filter(project__student=user).values(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/query.py", line 1481, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/query.py", line 1499, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/query.py", line 1506, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1643, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1675, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1560, in build_filter
+    self.check_related_objects(join_info.final_field, value, join_info.opts)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1369, in check_related_objects
+    self.check_query_object_type(value, opts, field)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1346, in check_query_object_type
+    raise ValueError(
+ValueError: Cannot query "mumojoy (student)": Must be "Student" instance.
+"GET /api/dashboard/student/ HTTP/1.1" 500 147543
+/home/muuo/Documents/SPMS/spms/backend/views/dashboard.py changed, reloading.
+Watching for file changes with StatReloader
+"OPTIONS /api/login/ HTTP/1.1" 200 0
+"POST /api/login/ HTTP/1.1" 200 103
+"OPTIONS /api/dashboard/student/ HTTP/1.1" 200 0
+Internal Server Error: /api/dashboard/student/
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/views/dashboard.py", line 15, in get
+    proposals = Proposal.objects.filter(project__student=user).values(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/query.py", line 1481, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/query.py", line 1499, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/query.py", line 1506, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1643, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1675, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1560, in build_filter
+    self.check_related_objects(join_info.final_field, value, join_info.opts)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1369, in check_related_objects
+    self.check_query_object_type(value, opts, field)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1346, in check_query_object_type
+    raise ValueError(
+ValueError: Cannot query "mumojoy (student)": Must be "Student" instance.
+"GET /api/dashboard/student/ HTTP/1.1" 500 147541
+"POST /api/login/ HTTP/1.1" 200 101
+"OPTIONS /api/lecturer/submitted-topics/ HTTP/1.1" 200 0
+"GET /api/lecturer/submitted-topics/ HTTP/1.1" 200 2140
+"OPTIONS /api/lecturer/supervisors/ HTTP/1.1" 200 0
+"GET /api/lecturer/supervisors/ HTTP/1.1" 200 258
+"POST /api/login/ HTTP/1.1" 200 100
+Internal Server Error: /api/dashboard/student/
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/views/dashboard.py", line 15, in get
+    proposals = Proposal.objects.filter(project__student=user).values(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/query.py", line 1481, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/query.py", line 1499, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/query.py", line 1506, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1643, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1675, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1560, in build_filter
+    self.check_related_objects(join_info.final_field, value, join_info.opts)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1369, in check_related_objects
+    self.check_query_object_type(value, opts, field)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1346, in check_query_object_type
+    raise ValueError(
+ValueError: Cannot query "bibs (student)": Must be "Student" instance.
+"GET /api/dashboard/student/ HTTP/1.1" 500 147484
+/home/muuo/Documents/SPMS/spms/backend/views/dashboard.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/views/dashboard.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/views/dashboard.py changed, reloading.
+Watching for file changes with StatReloader
+"OPTIONS /api/login/ HTTP/1.1" 200 0
+"POST /api/login/ HTTP/1.1" 200 100
+"OPTIONS /api/dashboard/student/ HTTP/1.1" 200 0
+"GET /api/dashboard/student/ HTTP/1.1" 200 96
+"OPTIONS /api/dashboard/student/submit-topic/ HTTP/1.1" 200 0
+Internal Server Error: /api/dashboard/student/submit-topic/
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/views/student.py", line 19, in post
+    if Project.objects.filter(student=request.user).exists():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/query.py", line 1481, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/query.py", line 1499, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/query.py", line 1506, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1643, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1675, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1560, in build_filter
+    self.check_related_objects(join_info.final_field, value, join_info.opts)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1369, in check_related_objects
+    self.check_query_object_type(value, opts, field)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1346, in check_query_object_type
+    raise ValueError(
+ValueError: Cannot query "bibs (student)": Must be "Student" instance.
+"POST /api/dashboard/student/submit-topic/ HTTP/1.1" 500 147009
+"GET /api/dashboard/student/ HTTP/1.1" 200 96
+"POST /api/login/ HTTP/1.1" 200 101
+"OPTIONS /api/lecturer/submitted-topics/ HTTP/1.1" 200 0
+"GET /api/lecturer/submitted-topics/ HTTP/1.1" 200 2140
+"OPTIONS /api/lecturer/supervisors/ HTTP/1.1" 200 0
+"GET /api/lecturer/supervisors/ HTTP/1.1" 200 258
+"POST /api/login/ HTTP/1.1" 200 103
+"OPTIONS /api/supervisor/assigned-projects/ HTTP/1.1" 200 0
+Forbidden: /api/lecturer/supervisors/
+"GET /api/lecturer/supervisors/ HTTP/1.1" 403 63
+"GET /api/supervisor/assigned-projects/ HTTP/1.1" 200 4756
+"GET /admin/backend/proposal/ HTTP/1.1" 200 18142
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2674
+"GET /admin/backend/lecturer/ HTTP/1.1" 200 16608
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/lecturer/8/change/ HTTP/1.1" 200 19852
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/backend/lecturer/8/change/ HTTP/1.1" 302 0
+"GET /admin/backend/lecturer/ HTTP/1.1" 200 16821
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"OPTIONS /api/login/ HTTP/1.1" 200 0
+"POST /api/login/ HTTP/1.1" 200 101
+"OPTIONS /api/lecturer/submitted-topics/ HTTP/1.1" 200 0
+"GET /api/lecturer/submitted-topics/ HTTP/1.1" 200 2140
+"OPTIONS /api/lecturer/supervisors/ HTTP/1.1" 200 0
+"GET /api/lecturer/supervisors/ HTTP/1.1" 200 258
+Bad Request: /api/login/
+"POST /api/login/ HTTP/1.1" 400 68
+"GET /admin/backend/supervisor/ HTTP/1.1" 200 18571
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/student/ HTTP/1.1" 200 23981
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/proposal/ HTTP/1.1" 200 18142
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/project/ HTTP/1.1" 200 19024
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/notification/ HTTP/1.1" 200 16129
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/lecturer/ HTTP/1.1" 200 16608
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/announcement/ HTTP/1.1" 200 17172
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /api/login/ HTTP/1.1" 200 101
+"GET /api/lecturer/submitted-topics/ HTTP/1.1" 200 2140
+"GET /api/lecturer/supervisors/ HTTP/1.1" 200 258
+"OPTIONS /api/login/ HTTP/1.1" 200 0
+"POST /api/login/ HTTP/1.1" 200 103
+"OPTIONS /api/dashboard/student/ HTTP/1.1" 200 0
+"GET /api/dashboard/student/ HTTP/1.1" 200 96
+"OPTIONS /api/dashboard/student/submit-topic/ HTTP/1.1" 200 0
+Internal Server Error: /api/dashboard/student/submit-topic/
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/views/student.py", line 19, in post
+    if Project.objects.filter(student=request.user).exists():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/query.py", line 1481, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/query.py", line 1499, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/query.py", line 1506, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1643, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1675, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1560, in build_filter
+    self.check_related_objects(join_info.final_field, value, join_info.opts)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1369, in check_related_objects
+    self.check_query_object_type(value, opts, field)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1346, in check_query_object_type
+    raise ValueError(
+ValueError: Cannot query "mumojoy (student)": Must be "Student" instance.
+"POST /api/dashboard/student/submit-topic/ HTTP/1.1" 500 147032
+"GET /admin/backend/project/ HTTP/1.1" 200 19024
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/backend/project/14/change/ HTTP/1.1" 200 22728
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/backend/project/14/change/ HTTP/1.1" 200 22965
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /admin/backend/project/14/change/ HTTP/1.1" 200 22965
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /api/dashboard/student/ HTTP/1.1" 200 96
+"POST /api/login/ HTTP/1.1" 200 103
+"OPTIONS /api/lecturer/supervisors/ HTTP/1.1" 200 0
+"OPTIONS /api/supervisor/assigned-projects/ HTTP/1.1" 200 0
+Forbidden: /api/lecturer/supervisors/
+"GET /api/lecturer/supervisors/ HTTP/1.1" 403 63
+"GET /api/supervisor/assigned-projects/ HTTP/1.1" 200 4756
+"POST /api/login/ HTTP/1.1" 200 101
+"OPTIONS /api/lecturer/submitted-topics/ HTTP/1.1" 200 0
+"GET /api/lecturer/submitted-topics/ HTTP/1.1" 200 2140
+"GET /api/lecturer/supervisors/ HTTP/1.1" 200 258
+"POST /admin/backend/project/14/change/ HTTP/1.1" 302 0
+"GET /admin/backend/project/ HTTP/1.1" 200 19236
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"POST /api/login/ HTTP/1.1" 200 101
+"GET /api/lecturer/submitted-topics/ HTTP/1.1" 200 2142
+"GET /api/lecturer/supervisors/ HTTP/1.1" 200 258
+"OPTIONS /api/lecturer/topic/10/assign-supervisor/ HTTP/1.1" 200 0
+"POST /api/lecturer/topic/10/assign-supervisor/ HTTP/1.1" 200 92
+"GET /api/lecturer/submitted-topics/ HTTP/1.1" 200 2142
+"GET /api/lecturer/supervisors/ HTTP/1.1" 200 258
+"POST /api/login/ HTTP/1.1" 200 103
+Forbidden: /api/lecturer/supervisors/
+"GET /api/lecturer/supervisors/ HTTP/1.1" 403 63
+"GET /api/supervisor/assigned-projects/ HTTP/1.1" 200 4936
+"OPTIONS /api/supervisor/proposals/13/approve/ HTTP/1.1" 200 0
+"POST /api/supervisor/proposals/13/approve/ HTTP/1.1" 200 32
+"GET /api/supervisor/assigned-projects/ HTTP/1.1" 200 4936
+"POST /api/supervisor/proposals/13/approve/ HTTP/1.1" 200 32
+"GET /api/supervisor/assigned-projects/ HTTP/1.1" 200 4936
+"OPTIONS /api/register/ HTTP/1.1" 200 0
+Bad Request: /api/register/
+"POST /api/register/ HTTP/1.1" 400 45
+"POST /api/register/ HTTP/1.1" 201 330
+"POST /api/login/ HTTP/1.1" 200 102
+"GET /api/dashboard/student/ HTTP/1.1" 200 96
+Internal Server Error: /api/dashboard/student/submit-topic/
+Traceback (most recent call last):
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/spms/backend/views/student.py", line 19, in post
+    if Project.objects.filter(student=request.user).exists():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/query.py", line 1481, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/query.py", line 1499, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/query.py", line 1506, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1643, in add_q
+    clause, _ = self._add_q(q_object, can_reuse)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1675, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1560, in build_filter
+    self.check_related_objects(join_info.final_field, value, join_info.opts)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1369, in check_related_objects
+    self.check_query_object_type(value, opts, field)
+  File "/home/muuo/Documents/SPMS/virtual/lib/python3.11/site-packages/django/db/models/sql/query.py", line 1346, in check_query_object_type
+    raise ValueError(
+ValueError: Cannot query "wallai (student)": Must be "Student" instance.
+"POST /api/dashboard/student/submit-topic/ HTTP/1.1" 500 147091
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/views/student.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/views/student.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/views/student.py changed, reloading.
+Watching for file changes with StatReloader
+/home/muuo/Documents/SPMS/spms/backend/views/student.py changed, reloading.
+Watching for file changes with StatReloader
+"OPTIONS /api/login/ HTTP/1.1" 200 0
+"POST /api/login/ HTTP/1.1" 200 102
+"OPTIONS /api/dashboard/student/ HTTP/1.1" 200 0
+"GET /api/dashboard/student/ HTTP/1.1" 200 96
+"OPTIONS /api/dashboard/student/submit-topic/ HTTP/1.1" 200 0
+"POST /api/dashboard/student/submit-topic/ HTTP/1.1" 201 51
