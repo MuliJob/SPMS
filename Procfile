@@ -1,1 +1,1 @@
-web: gunicorn spms.wsgi:application
+startCommand: gunicorn spms.wsgi:application
