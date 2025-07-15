@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-oeaxe#bz9sfr)5snnl-zkakouf4r(*9*h#c2ydiega9*wl698o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.onrender.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -117,10 +117,10 @@ WSGI_APPLICATION = 'spms.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(
-        default=os.environ.get('postgresql://spms_db_t3rf_user:zfCnLyqIGiRG5w9ckGgcQxQzkT0XDeWt@dpg-d1r8igmmcj7s73al1js0-a/spms_db_t3rf')
-    )
+    'default': dj_database_url.config(default='postgresql://spms_db_t3rf_user:zfCnLyqIGiRG5w9ckGgcQxQzkT0XDeWt@dpg-d1r8igmmcj7s73al1js0-a/spms_db_t3rf')
 }
+
+
 
 
 # Password validation
@@ -168,6 +168,7 @@ CORS_ALLOWED_ORIGINS = [
 
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Media files configuration
 MEDIA_URL = '/media/'
