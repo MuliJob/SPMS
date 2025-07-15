@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
-
+import dj_database_url
 import os
 from pathlib import Path
 
@@ -117,10 +117,9 @@ WSGI_APPLICATION = 'spms.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        default=os.environ.get('postgresql://spms_db_t3rf_user:zfCnLyqIGiRG5w9ckGgcQxQzkT0XDeWt@dpg-d1r8igmmcj7s73al1js0-a/spms_db_t3rf')
+    )
 }
 
 
