@@ -57,6 +57,6 @@ urlpatterns = [
     path('supervisor/proposals/<int:proposal_id>/reject/', RejectProposalView.as_view()),
     path('api/proposals/' , ProposalViewSet.as_view({'get': 'list', 'post': 'create'}), name='proposal-list-create'),
     path('supervisor/project/<int:project_id>/proposals/', ProjectProposalsView.as_view(), name='project-proposals'),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
