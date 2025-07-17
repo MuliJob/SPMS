@@ -27,7 +27,8 @@ SECRET_KEY = 'django-insecure-oeaxe#bz9sfr)5snnl-zkakouf4r(*9*h#c2ydiega9*wl698o
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'https://spms-ri0v.onrender.com/',  
+    'spms-ri0v.onrender.com/',  
+    '.onrender.com',
     'localhost', 
     '127.0.0.1'
 ]
@@ -168,8 +169,10 @@ CORS_ALLOW_ALL_ORIGINS = False
 CORS_ALLOWED_ORIGINS = [
     'http://127.0.0.1:38787',  
     'http://127.0.0.1:8000',
-    'https://spms-frontend.web.app/',  
-    'https://spms-frontend.firebaseapp.com/',  
+    'https://spms-frontend.web.app',  
+    'https://spms-frontend.firebaseapp.com',
+    'http://localhost:3000',  
+    'http://127.0.0.1:3000',  
    
 ]
 
